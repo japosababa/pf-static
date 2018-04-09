@@ -3,30 +3,30 @@
     "id": 1,
     "title": "Вы ресторатор. К вам пришли следователи. Что делать?",
     "media": "Секрет фирмы",
-    "logo": "../img/logos/logo-rt-sm.png"
+    "logo": "img/logos/logo-rt-sm.png"
   },
   {
     "id": 2,
     "title": "Зачем Amazon купил Whole Foods Market? Ваше мнение",
     "media": "Коммерсант",
-    "logo": "../img/logos/logo-kommers-sm.png"
+    "logo": "img/logos/logo-kommers-sm.png"
   },
   {
     "id": 3,
     "title": "Каким будет курс биткоина к концу 2018?",
     "media": "РБК",
-    "logo": "../img/logos/logo-rbk-sm.png"
+    "logo": "img/logos/logo-rbk-sm.png"
   },
   {
     "id": 4,
     "title": "Нужен капитан: как готовить судно к сезону навигации",
     "media": "Коммерсант",
-    "logo": "../img/logos/logo-pervy-sm.png"
+    "logo": "img/logos/logo-pervy-sm.png"
   },
   {
     "id": 5,
     "title": "Зачем Amazon купил Whole Foods Market? Ваше мнение",
     "media": "GQ",
-    "logo": "../img/logos/logo-gq-sm.png"
+    "logo": "img/logos/logo-gq-sm.png"
   }
 ]
