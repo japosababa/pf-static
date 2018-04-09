@@ -1,0 +1,12 @@
+# IntelliJ project files
+.idea
+node_modules
+*.iml
+.DS_Store
+**/.DS_Store
+.sass-cache
+
+# Jekyll files
+_site
+.sass-cache
+.jekyll-metadata

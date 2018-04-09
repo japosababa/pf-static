@@ -1,0 +1,18 @@
+.bg-waves-3 {
+  background: url("../img/waves-3.svg") no-repeat center 11vw;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.bg-waves-4 {
+  background: url("../img/waves-4.svg") no-repeat center 5rem;
+  background-size: 100%;
+}
+
+.bg-light {
+  background-color: #fafafa;
+}
+
+.bg-blue-lighter {
+  background-color: $blue-lighter;
+}
