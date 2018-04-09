@@ -61,7 +61,11 @@ title: Pressfeed
                 {{#each slides}}
                 <div class="carousel-item {{ this.class }}">
                     <p class="carousel-item-title">{{ this.title }}</p>
-                    <img src="{{ this.img }}" alt="{{ this.title }}">
+                    <picture>
+                        <source srcset="{{this.img-mob}}" media="(max-width: 576px)">
+                        <source srcset="{{ this.img }}" media="(min-width: 577px)">
+                        <img srcset="{{this.img}}" alt="{{ this.title }}">
+                    </picture>
                 </div>
                 {{/each}}
             </div>
@@ -143,7 +147,6 @@ title: Pressfeed
             </div>
             <div class="col-lg-6">
                 <div class="p-3">
-                    <!--<h4 class="t-l mb-5 text-gray-light-2 f-bold">Сделано журналистами</h4>-->
                     <div class="t-m py-3">Привет! Я&nbsp;&mdash; Константин Бочарский, экс-редактор журнала &laquo;Секрет
                         Фирмы&raquo;,
                         ИД&nbsp;&laquo;Коммерсантъ&raquo;. Сервис Pressfeed.ru я&nbsp;придумал, чтобы помочь себе и&nbsp;коллегам
