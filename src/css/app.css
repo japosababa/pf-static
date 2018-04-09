@@ -7895,7 +7895,7 @@ header a[href^="callto:"], footer a[href^="callto:"] {
 .pf-footer {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   padding: 3rem 0;
-  background-position-y: 30vw; }
+  background-position-y: 20vw; }
   @media (min-width: 768px) {
     .pf-footer {
       padding: 5vw !important; } }
