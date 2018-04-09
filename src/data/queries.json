@@ -6,10 +6,10 @@
     "logo": "img/logos/logo-rt-sm.png"
   },
   {
-    "id": 2,
+    "id": 5,
     "title": "Зачем Amazon купил Whole Foods Market? Ваше мнение",
-    "media": "Коммерсант",
-    "logo": "img/logos/logo-kommers-sm.png"
+    "media": "GQ",
+    "logo": "img/logos/logo-gq-sm.png"
   },
   {
     "id": 3,
@@ -26,7 +26,7 @@
   {
     "id": 5,
     "title": "Зачем Amazon купил Whole Foods Market? Ваше мнение",
-    "media": "GQ",
-    "logo": "img/logos/logo-gq-sm.png"
+    "media": "Коммерсант",
+    "logo": "img/logos/logo-kommers-sm.png"
   }
 ]
