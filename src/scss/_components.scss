@@ -298,7 +298,7 @@
 }
 
 .pf-photo-bocharsky {
-  background: url('../img/bocharsky.jpg') no-repeat center bottom;
+  background: url('../img/bocharsky.jpg') no-repeat center;
   background-size: cover;
   height: 100%;
   min-height: 300px;
@@ -359,20 +359,20 @@
     .pf-faq-question {
       display: inline-block;
       margin-bottom: .5rem;
-      color: $black;
+
       position: relative;
       @extend .t-m;
       &:before {
         counter-increment: item;
         content: "" counter(item) ".";
         position: absolute;
-        left: -2rem;
-        color: $brand-primary;
+        left: -2.5rem;
+        color: $brand-danger;
         font-weight: 500;
       }
     }
     .pf-faq-answer {
-      color: #444;
+      /*font-size: 1.1rem;*/
     }
   }
 }
@@ -442,7 +442,7 @@
     }
     h3 {
       @extend .t-m;
-      color: $brand-primary;
+      //color: $brand-primary;
     }
   }
 }

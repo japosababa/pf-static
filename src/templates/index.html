@@ -86,9 +86,9 @@ title: Pressfeed
 <!-- Publications -->
 <section class="pf-section bg-white js-pb">
     <div class="container container-fluid">
-        <h2 class="t-l text-center mb-3">Как запросы становятся публикациями</h2>
-        <p class="text-center mb-4 mb-sm-6">Каждый день в России выходят статьи и передачи,<br> созданные с помощью
-            Pressfeed</p>
+        <h2 class="t-l text-center mb-4 mb-sm-6">Как запросы становятся публикациями</h2>
+        <!--<p class="text-center mb-4 mb-sm-6">Каждый день в России выходят статьи и передачи, созданные с помощью
+            Pressfeed</p>-->
         <div class="row justify-content-center mb-4 mb-sm-6">
             <div class="col-md-5">
                 <a class="card pf-card-query js-pb-query-link" target="_blank" href="">
@@ -96,7 +96,7 @@ title: Pressfeed
                         <div class="d-flex justify-content-center align-items-center">
                             <img class="js-pb-query-favicon">
                             <!--<i class="mr-2 material-icons">assignment</i>-->
-                            <span class="js-pb-media"></span>
+                            <span class="js-pb-media f-semi"></span>
                         </div>
                         <div class="d-flex justify-content-center align-items-center">
                             <span>Запрос</span>
@@ -139,54 +139,15 @@ title: Pressfeed
                 </a>
             </div>
         </div>
-        <div class="text-center">
-            <a class="btn btn-outline-primary mx-auto d-block d-md-inline t-n" href="">Все публикации</a>
-        </div>
-    </div>
-</section>
-
-<!-- Testimonials -->
-<section class="pf-section bg-light">
-    <div class="container container-fluid">
-        <h2 class="t-l text-center mb-5">Как Pressfeed помогает экспертам и журналистам</h2>
-        <div class="row justify-content-center">
-            <div class="col-lg-5">
-                <div class="pf-photo-bocharsky"></div>
-                <p class="d-none d-lg-block pf-queries-list-label">Константин Бочарский, основатель Pressfeed</p>
-            </div>
-            <div class="col-lg-6">
-                <div class="p-3">
-                    <div class="t-m py-3">Привет! Я&nbsp;&mdash; Константин Бочарский, экс-редактор журнала &laquo;Секрет
-                        Фирмы&raquo;,
-                        ИД&nbsp;&laquo;Коммерсантъ&raquo;. Сервис Pressfeed я&nbsp;придумал, чтобы помочь себе и&nbsp;коллегам
-                        искать фактуру для
-                        заметок.</p>
-                        <p class="mb-0"><a href="">Смотрите, как я&nbsp;делал это раньше и как теперь делать
-                            необязательно&nbsp;<i
-                                    class="material-icons align-middle">chevron_right</i></a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-11 justify-content-center mt-2 mt-lg-7">
-                <div class="pf-testimonials">
-                    {{#each testimonials}}
-                    <div class="card pf-testimonial">
-                        <div class="pf-testimonial-text">{{this.text}}</div>
-                        <div class="pf-testimonial-person">
-                            <img class="rounded-circle mr-3" src="{{this.img}}" width="60" height="60">
-                            <div class="pf-testimonial-name">{{this.name}}<br> <span class="text-danger f-semi">{{this.company}}</span>
-                            </div>
-                        </div>
-                    </div>
-                    {{/each}}
-                </div>
-            </div>
-        </div>
+        <form class="pf-signup mx-auto">
+            <input type="email" class="form-control" placeholder="Ваша почта" maxlength="200" required>
+            <button type="submit" class="btn btn-lg btn-warning">Регистрация</button>
+        </form>
     </div>
 </section>
 
 <!-- FAQ -->
-<section class="pf-section-zero">
+<section class="pf-section-zero bg-light">
     <div class="container container-fluid">
         <h2 class="t-l text-center mb-4">Вопросы</h2>
         <div class="pf-faq">
@@ -200,5 +161,45 @@ title: Pressfeed
             {{/each}}
         </div>
     </div>
+    </div>
+</section>
+
+<!-- History -->
+<section class="pf-section-zero p-0">
+    <div class="container container-fluid">
+        <!--<h2 class="t-l text-center mb-5">Как Pressfeed помогает экспертам и журналистам</h2>-->
+        <h2 class="t-l text-center mb-5">Перетяжка</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-4">
+                <div class="pf-photo-bocharsky"></div>
+            </div>
+            <div class="col-lg-5">
+                <div class="p-3">
+                    <div class="py-3">Привет! Я&nbsp;&mdash; Константин Бочарский, экс-редактор журнала &laquo;Секрет
+                        Фирмы&raquo;,
+                        ИД&nbsp;&laquo;Коммерсантъ&raquo;. Сервис Pressfeed я&nbsp;придумал, чтобы помочь себе и&nbsp;коллегам
+                        искать фактуру для
+                        заметок.</p>
+                        <p class="mb-0"><a href="">Смотрите, как я&nbsp;делал это раньше и как теперь делать
+                            необязательно&nbsp;<i
+                                    class="material-icons align-middle">chevron_right</i></a></p>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="col-sm-11 justify-content-center mt-2 mt-lg-7">
+                <div class="pf-testimonials">
+                    {{#each testimonials}}
+                    <div class="card pf-testimonial">
+                        <div class="pf-testimonial-text">{{this.text}}</div>
+                        <div class="pf-testimonial-person">
+                            <img class="rounded-circle mr-3" src="{{this.img}}" width="60" height="60">
+                            <div class="pf-testimonial-name">{{this.name}}<br> <span class="text-danger f-semi">{{this.company}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>-->
+        </div>
     </div>
 </section>
