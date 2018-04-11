@@ -270,7 +270,7 @@ html {
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 1.3rem;
   font-weight: normal;
   line-height: 1.5;
@@ -428,7 +428,7 @@ output {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-weight: 500;
   line-height: 1.25;
   color: inherit; }
@@ -3863,7 +3863,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -3945,7 +3945,7 @@ button.close {
   display: block;
   max-width: 276px;
   padding: 1px;
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -6868,7 +6868,7 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 .b-link-black, .table-plans tbody tr th a {
   border-bottom: 1px dotted rgba(0, 0, 0, 0.35); }
 
-.shadow-lg, .pf-signup, .pf-queries-list {
+.shadow-lg {
   box-shadow: 0 35px 54px rgba(0, 0, 0, 0.1), 0 5px 20px rgba(0, 0, 0, 0.05), 0 0 1px rgba(0, 0, 0, 0.05); }
 
 .shadow-md, .tooltip .tooltip-inner, .popover {
@@ -6942,16 +6942,16 @@ body {
   body.page-loaded {
     opacity: 1; }
 
-section:not(.pf-section) {
+section:not(.pf-section):not(.pf-section-zero) {
   position: relative;
   z-index: 1;
   padding-top: 4rem;
   padding-bottom: 4rem;
   overflow-x: hidden; }
-  section:not(.pf-section):first-of-type {
+  section:not(.pf-section):not(.pf-section-zero):not(.pf-section-zero):first-of-type {
     padding-top: 9rem; }
     @media (max-width: 991px) {
-      section:not(.pf-section):first-of-type {
+      section:not(.pf-section):not(.pf-section-zero):not(.pf-section-zero):first-of-type {
         padding-top: 6rem;
         padding-bottom: 5rem; } }
 
@@ -7449,10 +7449,10 @@ html, body {
     html, body {
       font-size: 1.2vw; } }
 
-.t-s, .pf-testimonials .pf-testimonial .pf-testimonial-person {
+.t-s, .pf-testimonial .pf-testimonial-person, .pf-figure .pf-figure-caption {
   font-size: 0.8rem; }
   @media only screen and (min-width: 1200px) {
-    .t-s, .pf-testimonials .pf-testimonial .pf-testimonial-person {
+    .t-s, .pf-testimonial .pf-testimonial-person, .pf-figure .pf-figure-caption {
       font-size: 0.96vw; } }
 
 .t-n {
@@ -7461,13 +7461,13 @@ html, body {
     .t-n {
       font-size: 1.2vw; } }
 
-.t-m, .pf-signup input, .pf-signup button {
+.t-m, .pf-signup input, .pf-signup button, .list-featured .list-featured-item h3 {
   font-size: 1.1rem; }
   @media (min-width: 576px) {
-    .t-m, .pf-signup input, .pf-signup button {
+    .t-m, .pf-signup input, .pf-signup button, .list-featured .list-featured-item h3 {
       font-size: 1.3rem; } }
   @media only screen and (min-width: 1200px) {
-    .t-m, .pf-signup input, .pf-signup button {
+    .t-m, .pf-signup input, .pf-signup button, .list-featured .list-featured-item h3 {
       font-size: 1.62vw; } }
 
 .t-l {
@@ -7575,29 +7575,34 @@ header a[href^="callto:"], footer a[href^="callto:"] {
     .pf-header a:hover, .pf-header a .active {
       color: #025aa5; }
 
-.pf-section {
+.pf-section, .pf-section-zero {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
   padding: 3rem 0; }
   @media (min-width: 768px) {
-    .pf-section {
+    .pf-section, .pf-section-zero {
       padding: 5vw;
       -ms-flex-pack: center;
           justify-content: center;
       min-height: 100vh; } }
-  .pf-section.pf-section-first {
-    padding-top: 5rem;
-    padding-bottom: 2rem; }
+  .pf-section.pf-section-first, .pf-section-first.pf-section-zero {
+    padding-top: 5rem; }
     @media (min-width: 768px) {
-      .pf-section.pf-section-first {
+      .pf-section.pf-section-first, .pf-section-first.pf-section-zero {
         padding-top: 8vw; } }
 
+@media (min-width: 768px) {
+  .pf-section-zero {
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    min-height: unset; } }
+
 .bg-waves-3, .pf-footer {
-  background: url("../img/waves-3.svg") no-repeat center 11vw;
+  background: url("../img/bg-feed-1.svg") no-repeat center 65%;
   background-attachment: fixed;
-  background-size: cover; }
+  background-size: 100%; }
 
 .bg-waves-4 {
   background: url("../img/waves-4.svg") no-repeat center 5rem;
@@ -7616,17 +7621,24 @@ header a[href^="callto:"], footer a[href^="callto:"] {
   border-radius: 0.25rem; }
   @media (min-width: 992px) {
     .pf-signup {
-      max-width: 85%; } }
+      max-width: 85%;
+      box-shadow: 0 35px 54px rgba(0, 0, 0, 0.1), 0 5px 20px rgba(0, 0, 0, 0.05), 0 0 1px rgba(0, 0, 0, 0.05); } }
   .pf-signup input, .pf-signup button {
     border: none; }
   .pf-signup input {
-    border-radius: 0.25rem 0 0 0.25rem; }
+    border-radius: 0.25rem 0 0 0.25rem;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    margin-right: -1px; }
+    @media (min-width: 992px) {
+      .pf-signup input {
+        border: none;
+        margin-right: 0; } }
   .pf-signup button {
     border-radius: 0 0.25rem 0.25rem 0;
-    padding: 0.75rem; }
+    padding: .65rem .75rem; }
     @media (min-width: 576px) {
       .pf-signup button {
-        padding: 0.75rem 1.5rem; } }
+        padding: .65rem 1.5rem; } }
 
 .pf-signup-simple {
   display: -ms-flexbox;
@@ -7643,12 +7655,15 @@ header a[href^="callto:"], footer a[href^="callto:"] {
     border-radius: 0; }
 
 .pf-queries-list {
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.75);
   border-radius: 0.25rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   margin-top: 2rem; }
   @media (min-width: 992px) {
     .pf-queries-list {
-      margin-top: 0; } }
+      margin-top: 0;
+      border: none;
+      box-shadow: 0 35px 54px rgba(0, 0, 0, 0.1), 0 5px 20px rgba(0, 0, 0, 0.05), 0 0 1px rgba(0, 0, 0, 0.05); } }
   .pf-queries-list a {
     display: -ms-flexbox;
     display: flex;
@@ -7660,8 +7675,8 @@ header a[href^="callto:"], footer a[href^="callto:"] {
     @media (min-width: 576px) {
       .pf-queries-list a {
         padding: 1vw 1.5rem; } }
-    .pf-queries-list a:not(:last-child) {
-      border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
+    .pf-queries-list a:not(:first-child) {
+      border-top: 1px solid rgba(0, 0, 0, 0.05); }
     .pf-queries-list a:hover {
       color: #025aa5; }
     .pf-queries-list a img {
@@ -7671,22 +7686,21 @@ header a[href^="callto:"], footer a[href^="callto:"] {
 .pf-queries-list-label {
   display: -ms-flexbox;
   display: flex;
-  padding: 1rem 1.5rem;
+  padding: .75rem 1.5rem;
   font-size: .75rem;
   font-weight: 500;
   letter-spacing: .2px;
   border-top-left-radius: 0.3rem;
   border-top-right-radius: 0.3rem;
-  color: #222;
+  color: #636c72;
   position: relative; }
   .pf-queries-list-label:after {
-    content: "";
     position: absolute;
     bottom: .5rem;
     left: 1.5rem;
     width: 3rem;
     height: 3px;
-    background-color: #FF5252; }
+    background-color: #000; }
 
 .pf-number {
   font-weight: 500;
@@ -7727,7 +7741,7 @@ header a[href^="callto:"], footer a[href^="callto:"] {
     border-radius: 10px; }
     @media only screen and (min-width: 1600px) {
       .carousel-item img {
-        max-width: 1100px; } }
+        max-width: 1000px; } }
 
 .carousel-indicators {
   position: static; }
@@ -7869,7 +7883,7 @@ header a[href^="callto:"], footer a[href^="callto:"] {
     .pf-photo-bocharsky {
       min-height: 240px; } }
 
-.pf-testimonials .pf-testimonial {
+.pf-testimonial {
   font-size: .9rem;
   padding: 1rem;
   display: -ms-flexbox;
@@ -7881,11 +7895,11 @@ header a[href^="callto:"], footer a[href^="callto:"] {
   margin-bottom: 1rem;
   border: 1px solid rgba(0, 0, 0, 0.1); }
   @media (min-width: 992px) {
-    .pf-testimonials .pf-testimonial {
+    .pf-testimonial {
       width: 30vw;
       margin-bottom: 0;
       margin-left: 1rem; } }
-  .pf-testimonials .pf-testimonial .pf-testimonial-person {
+  .pf-testimonial .pf-testimonial-person {
     display: -ms-flexbox;
     display: flex;
     margin-top: 1rem;
@@ -7895,7 +7909,94 @@ header a[href^="callto:"], footer a[href^="callto:"] {
 .pf-footer {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   padding: 3rem 0;
-  background-position-y: 20vw; }
+  background-size: cover; }
   @media (min-width: 768px) {
     .pf-footer {
-      padding: 5vw !important; } }
+      padding: 5vw !important;
+      background-position-y: 24vw;
+      background-size: 100%; } }
+
+.pf-faq {
+  margin: auto;
+  max-width: 800px;
+  counter-reset: item; }
+  .pf-faq .pf-faq-item + .pf-faq-item {
+    margin-top: 1rem; }
+  .pf-faq .pf-faq-item .pf-faq-question {
+    display: inline-block;
+    margin-bottom: .5rem;
+    color: #000;
+    position: relative; }
+    @media (min-width: 576px) {
+      .pf-faq .pf-faq-item .pf-faq-question {
+        font-size: 1.3rem; } }
+    .pf-faq .pf-faq-item .pf-faq-question:before {
+      counter-increment: item;
+      content: "" counter(item) ".";
+      position: absolute;
+      left: -2rem;
+      color: #0275D8;
+      font-weight: 500; }
+  .pf-faq .pf-faq-item .pf-faq-answer {
+    color: #444; }
+
+.pf-figure {
+  padding-left: .75rem;
+  padding-right: .75rem;
+  margin-bottom: 0; }
+  @media (min-width: 576px) {
+    .pf-figure {
+      padding: 0; } }
+  .pf-figure .pf-figure-img {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: none;
+    margin-bottom: 0;
+    border-radius: 6px; }
+    @media only screen and (min-width: 1600px) {
+      .pf-figure .pf-figure-img {
+        max-width: 1000px; } }
+  .pf-figure .pf-figure-caption {
+    padding-top: .75rem;
+    color: #636c72; }
+
+@media (min-width: 576px) {
+  .list-featured {
+    max-width: 65%; } }
+
+.list-featured .list-featured-item {
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 1rem;
+  margin-top: 1rem; }
+  @media (min-width: 576px) {
+    .list-featured .list-featured-item {
+      padding-top: 2rem;
+      margin-top: 2rem; } }
+  .list-featured .list-featured-item + .list-featured-item {
+    border-top: 1px solid rgba(0, 0, 0, 0.05); }
+  .list-featured .list-featured-item .list-featured-icon {
+    display: none; }
+    @media (min-width: 576px) {
+      .list-featured .list-featured-item .list-featured-icon {
+        width: 3rem;
+        height: 3rem;
+        background-color: #fff;
+        border-radius: 50%;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: center;
+            justify-content: center;
+        -ms-flex-align: center;
+            align-items: center;
+        margin-bottom: 1rem;
+        -ms-flex: 1 0 3rem;
+            flex: 1 0 3rem;
+        margin-right: 3rem; }
+        .list-featured .list-featured-item .list-featured-icon .material-icons {
+          font-size: 1.8rem;
+          color: #0275D8; } }
+  .list-featured .list-featured-item h3 {
+    color: #0275D8; }

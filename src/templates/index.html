@@ -8,12 +8,12 @@ title: Pressfeed
     <div class="container container-fluid">
         <div class="row">
             <div class="col-lg-6">
-                <h1 class="t-l" style="line-height: 1.35; font-weight: 500;">Сервис журналистских запросов.
+                <h1 class="t-l f-semi" style="line-height: 1.35; font-weight: 500;">Сервис журналистских запросов.
                     Помогаем <a href="jours.html">авторам</a> быстро находить фактуру для&nbsp;статей.
                     А&nbsp<a href="experts.html">экспертам и&nbsp;пиарщикам</a>&nbsp;— упоминания в&nbsp;СМИ.</h1>
                 <form class="pf-signup mt-4 mt-lg-6">
                     <input type="email" class="form-control" placeholder="Ваша почта" maxlength="200" required>
-                    <button type="submit" class="btn btn-lg btn-danger">Регистрация</button>
+                    <button type="submit" class="btn btn-lg btn-warning">Регистрация</button>
                 </form>
             </div>
             <div class="col-lg-6 pl-3 pl-lg-5">
@@ -28,17 +28,17 @@ title: Pressfeed
                 </div>
             </div>
         </div>
-        <div class="d-flex justify-content-between text-center text-sm-left flex-column flex-sm-row mt-5 mt-lg-7">
+        <div class="d-flex justify-content-between text-center text-sm-left flex-column flex-sm-row mt-5">
             <div>
-                <div class="pf-number">3500</div>
+                <div class="pf-number">3600</div>
                 <p>СМИ размещают запросы на&nbsp;Pressfeed.<br> Это 1/3&nbsp;редакций страны!</p>
             </div>
             <div>
-                <div class="pf-number mt-3 mt-sm-0">25 000</div>
+                <div class="pf-number mt-3 mt-sm-0">29000</div>
                 <p>экспертов отвечают журналистам<br> и&nbsp;получают упоминания в&nbsp;СМИ</p>
             </div>
             <div>
-                <div class="pf-number mt-3 mt-sm-0">35 000</div>
+                <div class="pf-number mt-3 mt-sm-0">35000</div>
                 <p>публикаций и&nbsp;телепередач вышло<br> при участии Pressfeed с&nbsp;2014&nbsp;года </p>
             </div>
         </div>
@@ -102,8 +102,7 @@ title: Pressfeed
                 <i class="material-icons d-block d-md-none my-2 text-danger">arrow_downward</i>
                 <svg class="img-fluid d-none d-md-inline-block" width="124" height="22" viewBox="0 0 124 22"
                      xmlns="http://www.w3.org/2000/svg"
-                     xmlns:xlink="http://www.w3.org/1999/xlink"><title>Arrowhead</title>
-                    <desc>Created with Sketch.</desc>
+                     xmlns:xlink="http://www.w3.org/1999/xlink">
                     <defs>
                         <path d="M522.62 169l-5.055-5.055-.026-3.861 11.775 10.853-11.629 10.998-.027-4.1 4.835-4.835h-116.493v-4h116.62z"
                               id="a"/>
@@ -136,7 +135,7 @@ title: Pressfeed
     </div>
 </section>
 
-
+<!-- Testimonials -->
 <section class="pf-section bg-light">
     <div class="container container-fluid">
         <h2 class="t-l text-center mb-5">Как Pressfeed помогает экспертам и журналистам</h2>
@@ -149,16 +148,17 @@ title: Pressfeed
                 <div class="p-3">
                     <div class="t-m py-3">Привет! Я&nbsp;&mdash; Константин Бочарский, экс-редактор журнала &laquo;Секрет
                         Фирмы&raquo;,
-                        ИД&nbsp;&laquo;Коммерсантъ&raquo;. Сервис Pressfeed.ru я&nbsp;придумал, чтобы помочь себе и&nbsp;коллегам
+                        ИД&nbsp;&laquo;Коммерсантъ&raquo;. Сервис Pressfeed я&nbsp;придумал, чтобы помочь себе и&nbsp;коллегам
                         искать фактуру для
                         заметок.</p>
-                        <p class="mb-0"><a href="">Как я&nbsp;делал это раньше и как теперь делать необязательно<i
-                                class="material-icons align-middle">chevron_right</i></a></p>
+                        <p class="mb-0"><a href="">Смотрите, как я&nbsp;делал это раньше и как теперь делать
+                            необязательно&nbsp;<i
+                                    class="material-icons align-middle">chevron_right</i></a></p>
                     </div>
                 </div>
             </div>
             <div class="col-sm-11 justify-content-center mt-2 mt-lg-7">
-                <div class="pf-testimonials ">
+                <div class="pf-testimonials">
                     {{#each testimonials}}
                     <div class="card pf-testimonial">
                         <div class="pf-testimonial-text">{{this.text}}</div>
@@ -171,6 +171,24 @@ title: Pressfeed
                     {{/each}}
                 </div>
             </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="pf-section-zero">
+    <div class="container container-fluid">
+        <h2 class="t-l text-center mb-4">Вопросы</h2>
+        <div class="pf-faq">
+            {{#each faq}}
+            <div class="pf-faq-item">
+                <a class="pf-faq-question" data-toggle="collapse" href="#question-{{this.id}}">{{{this.q}}}</a>
+                <div class="pf-faq-answer collapse" id="question-{{this.id}}">
+                    {{{this.a}}}
+                </div>
+            </div>
+            {{/each}}
+        </div>
         </div>
     </div>
 </section>
