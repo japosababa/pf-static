@@ -20,8 +20,6 @@ $(function () {
     $('[data-toggle="tooltip"]').tooltip()
 });
 
-// Logos slider TODO
-
 // Fire publication slider
 $(document).ready(function () {
     $('.slider-logos').slick({
@@ -98,6 +96,61 @@ if ($(window).width() > 800) {
     });
 })();
 
+<!--Handling the queries and publictions-->
+
+
+var publicationBox = document.querySelector('.js-pb');
+var pbMedia = document.querySelector('.js-pb-media');
+var pbQueryTitle = document.querySelector('.js-pb-query-title');
+var pbFavicon = document.querySelector('.js-pb-query-favicon');
+var pbQueryBody = document.querySelector('.js-pb-query-body');
+var pbQueryLink = document.querySelector('.js-pb-query-link');
+var pbArticleDate = document.querySelector('.js-pb-article-date');
+var pbArticleTitle = document.querySelector('.js-pb-article-title');
+var pbArticleLink = document.querySelector('.js-pb-article-link');
+
+
+if (publicationBox) {
+    $.ajax({
+        type: "GET",
+        beforeSend: function (request) {
+            request.setRequestHeader("Current-Version", "v1");
+        },
+        url: 'https://api.pressfeed.ru/publications/release',
+        success: function (msg) {
+
+            var queryData = msg.data[0];
+
+            pbMedia.innerText = queryData.media_name;
+            pbQueryTitle.innerText = queryData.query_title;
+            pbQueryBody.innerText = queryData.query_text.substring(0, 600);
+            pbQueryLink.href = '//pressfeed.ru/private/allquerydetail/' + queryData.query_id + '';
+            pbArticleDate.innerText = '' + queryData.publication_created_at.slice(8, 10) + '.' + queryData.publication_created_at.slice(5, 7) + '.' + queryData.publication_created_at.slice(0, 4);
+            pbArticleTitle.innerText = queryData.publication_title;
+            pbArticleLink.href = queryData.publication_link;
+            pbArticleLink.style.backgroundImage = "url('" + queryData.publication_img + "')";
+
+            // todo: insert favicon if it exists
+            var faviconUrl = 'https://' + queryData.media_site + '/favicon.ico';
+
+            function checkFavicon(imageSrc, good, bad) {
+                var img = new Image();
+                img.onload = good;
+                img.onerror = bad;
+                img.src = imageSrc;
+            }
+
+            checkFavicon(faviconUrl, function () {
+                pbFavicon.src = faviconUrl;
+                pbFavicon.classList.add('mr-2');
+            }, function () {
+                pbFavicon.classList.add('d-none');
+            });
+
+
+        }
+    });
+}
 
 // Plans switcher
 

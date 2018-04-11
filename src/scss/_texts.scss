@@ -8,14 +8,16 @@ body, .t-n {
 }
 
 .t-s {
-  font-size: .8rem;
+  font-size: .8rem !important;
 }
 
 .t-m {
   font-size: 1.1rem;
+  @include media-breakpoint-up(sm) {
+    font-size: 1.5rem;
+  }
   @include media-breakpoint-up(xl) {
     font-size: 1.7rem;
-
   }
 }
 

@@ -24,8 +24,8 @@
 <!-- Header -->
 <header class="pf-header">
     <div class="pf-header-container">
-        <div class="pf-header-section">
-            <a class="pf-logo" href="index.html">pressfeed</a>
+        <div class="pf-header-section d-flex align-items-stretch">
+            <a class="pf-logo  active" href="index.html">pressfeed</a>
         </div>
         <div class="pf-header-section d-none d-lg-flex">
             <nav class="pf-header-nav">
@@ -37,7 +37,7 @@
             </nav>
         </div>
         <div class="pf-header-section d-none d-lg-flex">
-            <form class="pf-signup-simple">
+            <form class="pf-signup-simple bg-blue">
                 <input type="email" class="form-control" placeholder="Ваша почта" maxlength="200" required>
                 <button type="submit" class="btn btn-warning">Регистрация</button>
             </form>
@@ -76,7 +76,8 @@
         <div class="row">
             <div class="col-md-6 col-xl-7">
                 <p class="ff-special t-m f-light mb-4">Первый в&nbsp;России сервис журналистских запросов</p>
-                <h1 class="ff-special t-l f-light mb-4">Помогаем журналистам <span class="font-italic f-semi">быстро</span> получать <span
+                <h1 class="ff-special t-l f-light mb-4">Помогаем журналистам <span
+                        class="font-italic f-semi">быстро</span> получать <span
                         class="f-semi">фактуру для&nbsp;статей</span>. А&nbsp;экспертам и&nbsp;пиарщикам — <span
                         class="f-semi">упоминания в&nbsp;СМИ</span></h1>
                 <form class="pf-signup mt-lg-6">
@@ -192,16 +193,25 @@
 <section class="pf-section bg-white js-pb">
     <div class="container container-fluid">
         <h2 class="t-l text-center mb-3">Как запросы становятся публикациями</h2>
-        <p class="text-center mb-4 mb-sm-6">Каждый день в России выходят статьи и передачи,<br> созданные с помощью Pressfeed</p>
+        <p class="text-center mb-4 mb-sm-6">Каждый день в России выходят статьи и передачи,<br> созданные с помощью
+            Pressfeed</p>
         <div class="row justify-content-center mb-4 mb-sm-6">
             <div class="col-md-5">
                 <a class="card pf-card-query js-pb-query-link" target="_blank" href="">
                     <div class="card-header">
-                        <i class="material-icons align-middle">assignment</i>&nbsp;<span
-                            class="align-middle">Запрос</span>
-                        <span class="float-right js-pb-media"></span>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <img class="js-pb-query-favicon">
+                            <!--<i class="mr-2 material-icons">assignment</i>-->
+                            <span class="js-pb-media"></span>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span>Запрос</span>
+                        </div>
                     </div>
-                    <div class="card-body js-pb-query-body"></div>
+                    <div class="card-body">
+                        <h4 class="f-semi t-m mt-3 mb-5 js-pb-query-title"></h4>
+                        <div class="js-pb-query-body"></div>
+                    </div>
                 </a>
             </div>
             <div class="col-md-1 d-flex justify-content-center">
@@ -223,8 +233,8 @@
             </div>
             <div class="col-md-5">
                 <a class="card pf-card-article js-pb-article-link" target="_blank" href="">
-                    <div class="card-header">
-                        <i class="material-icons align-middle">description</i>&nbsp;<span class="align-middle">Публикация</span>
+                    <div class="card-header text-right">
+                        <!--<i class="material-icons align-middle">description</i>--><span class="align-middle">Публикация</span>
                         <!--<span class="float-right js-pb-media"></span>-->
                     </div>
                     <div class="card-body">
@@ -434,41 +444,6 @@
 <script src="js/main.js"></script>
 <!-- endbuild -->
 
-<!--Handling the queries and publictions-->
-<script>
-
-    var publicationBox = document.querySelector('.js-pb');
-    var pbMedia = document.querySelector('.js-pb-media');
-    var pbQueryBody = document.querySelector('.js-pb-query-body');
-    var pbQueryLink = document.querySelector('.js-pb-query-link');
-    var pbArticleDate = document.querySelector('.js-pb-article-date');
-    var pbArticleTitle = document.querySelector('.js-pb-article-title');
-    var pbArticleLink = document.querySelector('.js-pb-article-link');
-
-
-    if (publicationBox) {
-        $.ajax({
-            type: "GET",
-            beforeSend: function (request) {
-                request.setRequestHeader("Current-Version", "v1");
-            },
-            url: 'https://api.pressfeed.ru/publications/release',
-            success: function (msg) {
-
-                var queryData = msg.data[0];
-
-                pbMedia.innerText = queryData.media_name;
-                pbQueryBody.innerText = queryData.query_text.substring(0, 600);
-                pbQueryLink.href = '//pressfeed.ru/private/allquerydetail/' + queryData.query_id + '';
-                pbArticleDate.innerText = '' + queryData.publication_created_at.slice(8, 10) + '.' + queryData.publication_created_at.slice(5, 7) + '.' + queryData.publication_created_at.slice(0, 4);
-                pbArticleTitle.innerText = queryData.publication_title;
-                pbArticleLink.href = queryData.publication_link;
-                pbArticleLink.style.backgroundImage = "url('" + queryData.publication_img + "')";
-                console.log(queryData.publication_img)
-            }
-        });
-    }
-</script>
 
 </body>
 </html>

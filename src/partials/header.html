@@ -1,8 +1,8 @@
 <!-- Header -->
 <header class="pf-header">
     <div class="pf-header-container">
-        <div class="pf-header-section">
-            <a class="pf-logo" href="index.html">pressfeed</a>
+        <div class="pf-header-section d-flex align-items-stretch">
+            <a class="pf-logo {{#ifpage 'index'}} active{{/ifpage}}" href="index.html">pressfeed</a>
         </div>
         <div class="pf-header-section d-none d-lg-flex">
             <nav class="pf-header-nav">
@@ -14,7 +14,7 @@
             </nav>
         </div>
         <div class="pf-header-section d-none d-lg-flex">
-            <form class="pf-signup-simple">
+            <form class="pf-signup-simple bg-blue">
                 <input type="email" class="form-control" placeholder="Ваша почта" maxlength="200" required>
                 <button type="submit" class="btn btn-warning">Регистрация</button>
             </form>

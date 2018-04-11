@@ -7440,7 +7440,7 @@ footer {
 .pf-header {
   position: fixed;
   z-index: 210;
-  height: 50px;
+  height: 40px;
   top: 0;
   left: 0;
   width: 100%;
@@ -7449,8 +7449,10 @@ footer {
   -ms-flex-align: center;
       align-items: center;
   border-bottom: 1px solid #DBEAF8;
+  border-top: 1px solid #DBEAF8;
   background-color: #fff;
-  line-height: 1; }
+  line-height: 1;
+  margin-top: -1px; }
   .pf-header .pf-header-container {
     width: 100%;
     height: 100%;
@@ -7507,6 +7509,25 @@ footer {
     color: #464a4c; }
     .pf-header a:hover, .pf-header a .active {
       color: #2e3031; }
+  .pf-header .pf-logo {
+    position: relative;
+    background-color: #fff;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center; }
+    .pf-header .pf-logo.active:after {
+      content: "";
+      position: absolute;
+      width: 2rem;
+      height: 2rem;
+      left: 50%;
+      -ms-transform: translateX(-50%) rotate(45deg);
+          transform: translateX(-50%) rotate(45deg);
+      bottom: -.5rem;
+      z-index: -1;
+      background-color: #fff;
+      border: 1px solid #dbeaf8; }
 
 .pf-section, .pf-section-zero {
   display: -ms-flexbox;
@@ -7591,7 +7612,7 @@ footer {
   display: -ms-flexbox;
   display: flex;
   height: 100%;
-  border-left: 1px solid #f7f7f9;
+  border-left: 1px solid #DBEAF8;
   border-radius: 0;
   box-shadow: none; }
   .pf-signup-simple input, .pf-signup-simple button {
@@ -7601,6 +7622,8 @@ footer {
     padding-right: .8rem;
     border-radius: 0;
     color: #464a4c; }
+  .pf-signup-simple input {
+    background-color: #fcfcfc; }
 
 .pf-queries-list {
   background-color: rgba(255, 255, 255, 0.75);
@@ -7736,31 +7759,37 @@ footer {
 .pf-card-query {
   overflow-y: hidden;
   width: 100%;
-  height: 300px;
+  height: 240px;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  color: #878787;
   transition: all .3s;
   will-change: transform; }
   @media (min-width: 1100px) {
     .pf-card-query {
-      height: 400px; } }
+      height: 340px; } }
   .pf-card-query .card-header {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    background-color: transparent;
-    font-weight: 500; }
+    background-color: #292b2c;
+    font-weight: 500;
+    color: #fff;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    min-height: 50px; }
+    .pf-card-query .card-header img {
+      max-width: 32px; }
   .pf-card-query .card-body {
     padding: 1rem;
     position: relative;
-    overflow-wrap: break-word; }
-  .pf-card-query:hover {
-    color: #878787; }
-    @media (min-width: 1100px) {
-      .pf-card-query:hover {
-        -ms-transform: translateY(10px);
-            transform: translateY(10px);
-        transition: transform .2s; }
-        .pf-card-query:hover .card-header {
-          color: #0275D8; } }
+    overflow-wrap: break-word;
+    color: #9b9b9b;
+    background-color: #eee;
+    height: 100%; }
+  @media (min-width: 1100px) {
+    .pf-card-query:hover {
+      -ms-transform: translateY(10px);
+          transform: translateY(10px);
+      transition: transform .3s; } }
   .pf-card-query:after {
     content: "";
     position: absolute;
@@ -7769,16 +7798,16 @@ footer {
         transform: translateX(-50%);
     bottom: 0;
     display: block;
-    height: 2rem;
+    height: 3rem;
     width: 98%;
-    background: linear-gradient(rgba(255, 255, 255, 0.25), white); }
+    background: linear-gradient(rgba(238, 238, 238, 0.25), #eee); }
 
 .pf-card-article {
   width: 100%;
   max-width: 100%;
   -ms-flex: 1 0 100%;
       flex: 1 0 100%;
-  height: 300px;
+  height: 240px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
@@ -7794,7 +7823,7 @@ footer {
   border: none; }
   @media (min-width: 1100px) {
     .pf-card-article {
-      height: 400px; } }
+      height: 340px; } }
   .pf-card-article .card-header, .pf-card-article .card-body {
     z-index: 10;
     background-color: transparent;
@@ -7955,10 +7984,13 @@ body, .t-n {
       font-size: 1.05rem; } }
 
 .t-s, .pf-testimonial .pf-testimonial-person, .pf-figure .pf-figure-caption {
-  font-size: .8rem; }
+  font-size: .8rem !important; }
 
 .t-m, .pf-signup input, .pf-signup button, .pf-faq .pf-faq-item .pf-faq-question, .list-featured .list-featured-item h3 {
   font-size: 1.1rem; }
+  @media (min-width: 576px) {
+    .t-m, .pf-signup input, .pf-signup button, .pf-faq .pf-faq-item .pf-faq-question, .list-featured .list-featured-item h3 {
+      font-size: 1.5rem; } }
   @media (min-width: 1600px) {
     .t-m, .pf-signup input, .pf-signup button, .pf-faq .pf-faq-item .pf-faq-question, .list-featured .list-featured-item h3 {
       font-size: 1.7rem; } }

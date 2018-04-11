@@ -24,8 +24,8 @@
 <!-- Header -->
 <header class="pf-header">
     <div class="pf-header-container">
-        <div class="pf-header-section">
-            <a class="pf-logo" href="index.html">pressfeed</a>
+        <div class="pf-header-section d-flex align-items-stretch">
+            <a class="pf-logo " href="index.html">pressfeed</a>
         </div>
         <div class="pf-header-section d-none d-lg-flex">
             <nav class="pf-header-nav">
@@ -37,7 +37,7 @@
             </nav>
         </div>
         <div class="pf-header-section d-none d-lg-flex">
-            <form class="pf-signup-simple">
+            <form class="pf-signup-simple bg-blue">
                 <input type="email" class="form-control" placeholder="Ваша почта" maxlength="200" required>
                 <button type="submit" class="btn btn-warning">Регистрация</button>
             </form>
@@ -778,41 +778,6 @@
 <script src="js/main.js"></script>
 <!-- endbuild -->
 
-<!--Handling the queries and publictions-->
-<script>
-
-    var publicationBox = document.querySelector('.js-pb');
-    var pbMedia = document.querySelector('.js-pb-media');
-    var pbQueryBody = document.querySelector('.js-pb-query-body');
-    var pbQueryLink = document.querySelector('.js-pb-query-link');
-    var pbArticleDate = document.querySelector('.js-pb-article-date');
-    var pbArticleTitle = document.querySelector('.js-pb-article-title');
-    var pbArticleLink = document.querySelector('.js-pb-article-link');
-
-
-    if (publicationBox) {
-        $.ajax({
-            type: "GET",
-            beforeSend: function (request) {
-                request.setRequestHeader("Current-Version", "v1");
-            },
-            url: 'https://api.pressfeed.ru/publications/release',
-            success: function (msg) {
-
-                var queryData = msg.data[0];
-
-                pbMedia.innerText = queryData.media_name;
-                pbQueryBody.innerText = queryData.query_text.substring(0, 600);
-                pbQueryLink.href = '//pressfeed.ru/private/allquerydetail/' + queryData.query_id + '';
-                pbArticleDate.innerText = '' + queryData.publication_created_at.slice(8, 10) + '.' + queryData.publication_created_at.slice(5, 7) + '.' + queryData.publication_created_at.slice(0, 4);
-                pbArticleTitle.innerText = queryData.publication_title;
-                pbArticleLink.href = queryData.publication_link;
-                pbArticleLink.style.backgroundImage = "url('" + queryData.publication_img + "')";
-                console.log(queryData.publication_img)
-            }
-        });
-    }
-</script>
 
 </body>
 </html>
