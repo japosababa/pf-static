@@ -1,17 +1,18 @@
 .pf-section {
   display: flex;
   flex-direction: column;
-  padding: 3rem 0;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   @include media-breakpoint-up(md) {
-    padding: 5vw;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
     justify-content: center;
     min-height: 100vh;
   }
   &.pf-section-first {
-    padding-top: 5rem;
-
+    padding-top: 5.5rem;
     @include media-breakpoint-up(md) {
-      padding-top: 8vw;
+      padding-top: 7vw;
     }
   }
 }
@@ -21,5 +22,14 @@
   @include media-breakpoint-up(md) {
     justify-content: flex-start;
     min-height: unset;
+  }
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1300px;
+  @include media-breakpoint-up(xl) {
+    max-width: 1400px;
   }
 }

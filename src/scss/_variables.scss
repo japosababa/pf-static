@@ -222,8 +222,8 @@ $grid-breakpoints: (
   xs: 0,
   sm: 576px,
   md: 768px,
-  lg: 992px,
-  xl: 1200px
+  lg: 1025px,
+  xl: 1600px
 ) !default;
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
 @include _assert-starts-at-zero($grid-breakpoints);
@@ -266,7 +266,7 @@ $font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier Ne
 $font-family-base:       $font-family-sans-serif !default;
 $font-headings:          $font-family-sans-serif;
 
-$font-size-base: 1.3rem !default; // Assumes the browser default, typically `16px`
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
 
 $font-size-lg:   1.25rem !default;
 $font-size-sm:   .875rem !default;

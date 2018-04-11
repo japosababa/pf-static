@@ -2,10 +2,7 @@
 .pf-header {
   position: fixed;
   z-index: 210;
-  height: 46px;
-  @media only screen and (min-width: 1200px) {
-    height: 3.2vw;
-  }
+  height: 50px;
   top: 0;
   left: 0;
   width: 100%;
@@ -23,6 +20,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @extend .container;
   }
 
   .pf-header-section {

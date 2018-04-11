@@ -97,3 +97,63 @@ if ($(window).width() > 800) {
         });
     });
 })();
+
+
+// Plans switcher
+
+let planSwitcher = document.querySelector('.js-plan-switcher');
+
+if (planSwitcher) {
+
+    // Animated scroll
+    let scroll = new SmoothScroll('a[href*="#"]', {
+        header: '[data-scroll-header]',
+        ignore: '[data-scroll-ignore]',
+        offset: 30,
+    });
+
+    // Terms switcher
+
+    for (let x = 0; x < 3; x++) {
+        planSwitcher.getElementsByTagName('a')[x].addEventListener('click', function (e) {
+            e.preventDefault();
+
+            planSwitcher.querySelector('.active').classList.remove('active');
+            this.classList.add('active');
+
+            let planPrice = document.querySelectorAll('.js-plan-price');
+            for (let y = 0; y < planPrice.length; y++) {
+                planPrice[y].classList.add('isChanged');
+                setTimeout(function () {
+                    planPrice[y].classList.remove('isChanged');
+                }, 750)
+            }
+
+            if (x === 0) {
+                document.querySelector('.js-plan-1 .js-plan-price').innerHTML = '3591 <span class="f-xs">&#8381</span>';
+                document.querySelector('.js-plan-2 .js-plan-price').innerHTML = '8910 <span class="f-xs">&#8381</span>';
+                document.querySelector('.js-plan-3 .js-plan-price').innerHTML = '25 200 <span class="f-xs">&#8381</span>';
+                document.querySelector('.js-plan-1 .js-plan-note').innerHTML = 'В месяц при подписке на год<br><span class="text-black">Экономия 4788&nbsp;&#8381</span>';
+                document.querySelector('.js-plan-2 .js-plan-note').innerHTML = 'В месяц при подписке на год<br><span class="text-black">Экономия 11 880&nbsp;&#8381</span>';
+                document.querySelector('.js-plan-3 .js-plan-note').innerHTML = 'В месяц при подписке на год<br><span class="text-black">Экономия 33 600&nbsp;&#8381</span>';
+            } else if (x === 1) {
+                document.querySelector('.js-plan-1 .js-plan-price').innerHTML = '3790 <span class="f-xs">&#8381</span>';
+                document.querySelector('.js-plan-2 .js-plan-price').innerHTML = '9405 <span class="f-xs">&#8381</span>';
+                document.querySelector('.js-plan-3 .js-plan-price').innerHTML = '26 400 <span class="f-xs">&#8381</span>';
+                document.querySelector('.js-plan-1 .js-plan-note').innerHTML = 'В месяц при подписке на полгода<br>&nbsp;';
+                document.querySelector('.js-plan-2 .js-plan-note').innerHTML = 'В месяц при подписке на полгода<br>&nbsp;';
+                document.querySelector('.js-plan-3 .js-plan-note').innerHTML = 'В месяц при подписке на полгода<br>&nbsp;';
+            } else if (x === 2) {
+                document.querySelector('.js-plan-1 .js-plan-price').innerHTML = '3990 <span class="f-xs">&#8381</span>';
+                document.querySelector('.js-plan-2 .js-plan-price').innerHTML = '9900 <span class="f-xs">&#8381</span>';
+                document.querySelector('.js-plan-3 .js-plan-price').innerHTML = '28 000 <span class="f-xs">&#8381</span>';
+                document.querySelector('.js-plan-1 .js-plan-note').innerHTML = 'В месяц<br><span class="text-danger">Подписка минимум на&nbsp;3&nbsp;месяца</span>';
+                document.querySelector('.js-plan-2 .js-plan-note').innerHTML = 'В месяц<br>&nbsp;';
+                document.querySelector('.js-plan-3 .js-plan-note').innerHTML = 'В месяц<br>&nbsp;';
+            }
+
+        })
+
+    }
+
+}

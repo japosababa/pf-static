@@ -70,33 +70,12 @@
     </div>
 </div>
 
-<!-- Mobile Menu-->
-<div class="menu-mob" id="menu-mob">
-    <nav class="d-flex flex-column h3 system f-normal align-items-center">
-        <a href="jours.html">Журналистам</a>
-        <a class="mt-3" href="experts.html">Экспертам</a>
-        <a class="mt-3" href="s-plans.html">Тарифы</a>
-        <a class="mt-3" href="help.html">Помощь</a>
-        <a href="//news.pressfeed.ru/">Блог</a>
-    </nav>
-    <div class="p-4">
-        <div class="input-group pf-input-group">
-            <input type="email" class="form-control" placeholder="Ваша почта">
-            <span class="input-group-btn">
-                    <button class="btn btn-warning" type="button">Регистрация</button>
-                </span>
-        </div>
-        <a class="btn btn-link f-semi mt-3 w-100"
-           href="//pressfeed.ru/site/login">Войти</a>
-    </div>
-</div>
-
-<section>
+<section class="justify-content-start align-items-start">
     <div class="container container-wide">
         <!-- Page Heading -->
         <div class="row">
-            <div class="col-xl-10 offset-xl-2 mb-5">
-                <h1 class="h3 col-md-10 px-0"><strong>Профессиональные аккаунты.</strong> Еще больше
+            <div class="col-xl-10 offset-lg-2 mb-5">
+                <h1 class="h3 f-light ff-special col-md-10 px-0"><strong>Профессиональные аккаунты.</strong> Еще больше
                     инструментов для&nbsp;пиарщиков и&nbsp;экспертов. Еще больше общения с&nbsp;журналистами. Еще&nbsp;больше
                     публикаций</h1>
             </div>
@@ -104,8 +83,8 @@
         <!-- Plans -->
         <div class="row relative">
             <div class="hidden-lg-down"></div>
-            <div class="col-xl-2 d-flex align-items-end pl-0">
-                <div class="card-block hidden-lg-down">
+            <div class="col-lg-2 d-flex align-items-end pl-0">
+                <div class="card-block hidden-md-down">
                     <p class="f-xs text-uppercase">Услуга</p>
                     <a href="//vp.pressfeed.ru/" class="h5 f-light text-primary">Виртуальный пиарщик</a>
                     <p class="f-sm mt-3">Если нет времени на&nbsp;тарифы и&nbsp;работу
@@ -116,7 +95,7 @@
                 </div>
             </div>
             <!-- Plans -->
-            <div class="col-xl-10">
+            <div class="col-lg-10">
 
                 <div class="row f-sm">
                     <div class="col-lg-7 d-flex align-items-center mb-3">
@@ -139,7 +118,7 @@
                 <!-- Plan cards -->
                 <div class="row equal-cards">
                     <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
-                        <div class="card text-center">
+                        <div class="card shadow-xs text-center border-0">
                             <div class="card-block">
                                 <img class="mb-3" src="img/icon-tariff-1.svg">
                                 <h3>Базовый</h3>
@@ -153,7 +132,7 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
-                        <div class="card text-center js-plan-1">
+                        <div class="card text-center shadow-xs border-0 js-plan-1">
                             <div class="card-block">
                                 <img class="mb-3" src="img/icon-tariff-2.svg">
                                 <h3>Эксперт</h3>
@@ -172,7 +151,7 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
-                        <div class="card text-center bg-blue-light bg-special-corner js-plan-2">
+                        <div class="card text-center shadow-xs border-0 bg-blue-light bg-special-corner js-plan-2">
                             <div class="card-block">
                                 <img class="mb-3" src="img/icon-tariff-3.svg">
                                 <h3>Компания</h3>
@@ -189,7 +168,7 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
-                        <div class="card text-center js-plan-3">
+                        <div class="card text-center shadow-xs border-0 js-plan-3">
                             <div class="card-block">
                                 <img class="mb-3" src="img/icon-tariff-4.svg">
                                 <h3>Агентство</h3>
@@ -719,62 +698,6 @@
         </div>
     </div>
 </div>
-
-
-<script>
-    // Animated scroll
-    let scroll = new SmoothScroll('a[href*="#"]', {
-        header: '[data-scroll-header]',
-        ignore: '[data-scroll-ignore]',
-        offset: 30,
-    });
-
-    // Terms switcher
-
-    let planSwitcher = document.querySelector('.js-plan-switcher');
-
-    for (let x = 0; x < 3; x++) {
-        planSwitcher.getElementsByTagName('a')[x].addEventListener('click', function (e) {
-            e.preventDefault();
-
-            planSwitcher.querySelector('.active').classList.remove('active');
-            this.classList.add('active');
-
-            let planPrice = document.querySelectorAll('.js-plan-price');
-            for (let y = 0; y < planPrice.length; y++) {
-                planPrice[y].classList.add('isChanged');
-                setTimeout(function () {
-                    planPrice[y].classList.remove('isChanged');
-                }, 750)
-            }
-
-            if (x === 0) {
-                document.querySelector('.js-plan-1 .js-plan-price').innerHTML = '3591 <span class="f-xs">&#8381</span>';
-                document.querySelector('.js-plan-2 .js-plan-price').innerHTML = '8910 <span class="f-xs">&#8381</span>';
-                document.querySelector('.js-plan-3 .js-plan-price').innerHTML = '25 200 <span class="f-xs">&#8381</span>';
-                document.querySelector('.js-plan-1 .js-plan-note').innerHTML = 'В месяц при подписке на год<br><span class="text-black">Экономия 4788&nbsp;&#8381</span>';
-                document.querySelector('.js-plan-2 .js-plan-note').innerHTML = 'В месяц при подписке на год<br><span class="text-black">Экономия 11 880&nbsp;&#8381</span>';
-                document.querySelector('.js-plan-3 .js-plan-note').innerHTML = 'В месяц при подписке на год<br><span class="text-black">Экономия 33 600&nbsp;&#8381</span>';
-            } else if (x === 1) {
-                document.querySelector('.js-plan-1 .js-plan-price').innerHTML = '3790 <span class="f-xs">&#8381</span>';
-                document.querySelector('.js-plan-2 .js-plan-price').innerHTML = '9405 <span class="f-xs">&#8381</span>';
-                document.querySelector('.js-plan-3 .js-plan-price').innerHTML = '26 400 <span class="f-xs">&#8381</span>';
-                document.querySelector('.js-plan-1 .js-plan-note').innerHTML = 'В месяц при подписке на полгода<br>&nbsp;';
-                document.querySelector('.js-plan-2 .js-plan-note').innerHTML = 'В месяц при подписке на полгода<br>&nbsp;';
-                document.querySelector('.js-plan-3 .js-plan-note').innerHTML = 'В месяц при подписке на полгода<br>&nbsp;';
-            } else if (x === 2) {
-                document.querySelector('.js-plan-1 .js-plan-price').innerHTML = '3990 <span class="f-xs">&#8381</span>';
-                document.querySelector('.js-plan-2 .js-plan-price').innerHTML = '9900 <span class="f-xs">&#8381</span>';
-                document.querySelector('.js-plan-3 .js-plan-price').innerHTML = '28 000 <span class="f-xs">&#8381</span>';
-                document.querySelector('.js-plan-1 .js-plan-note').innerHTML = 'В месяц<br><span class="text-danger">Подписка минимум на&nbsp;3&nbsp;месяца</span>';
-                document.querySelector('.js-plan-2 .js-plan-note').innerHTML = 'В месяц<br>&nbsp;';
-                document.querySelector('.js-plan-3 .js-plan-note').innerHTML = 'В месяц<br>&nbsp;';
-            }
-
-        })
-
-    }
-</script>
 
 
 <!-- Footer -->
