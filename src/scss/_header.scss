@@ -8,7 +8,7 @@
   width: 100%;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid $gray-lightest;
+  border-bottom: 1px solid $blue-lighter;
   background-color: $white;
   line-height: 1;
   .pf-header-container {
@@ -31,17 +31,46 @@
   }
 
   .pf-header-nav {
+    display: flex;
+    height: 100%;
     a {
+      display: flex;
+      padding-top: 5px;
+      height: 100%;
+      align-items: center;
+      text-transform: uppercase;
+      font-size: .8rem;
+      font-weight: 500;
+      letter-spacing: .35px;
+      background-color: #fff;
+
       & + a {
-        margin-left: 1.25rem;
+        margin-left: 1.75rem;
+      }
+      &.active {
+        position: relative;
+        color: $black;
+        &:after {
+          content: "";
+          position: absolute;
+          width: 2rem;
+          height: 2rem;
+          left: 50%;
+          transform: translateX(-50%) rotate(45deg);
+          bottom: -.5rem;
+          z-index: -1;
+          background-color: #fff;
+          border: 1px solid #dbeaf8;
+        }
       }
     }
   }
 
   a {
-    color: #222;
+    color: $gray;
     &:hover, .active {
-      color: darken($brand-primary, 10%);
+      color: darken($gray, 10%);
     }
   }
+
 }

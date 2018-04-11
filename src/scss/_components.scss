@@ -42,10 +42,11 @@
   box-shadow: none;
   input, button {
     letter-spacing: .1px;
-    font-size: inherit;
     border: none;
-    padding: .3rem .6rem;
+    padding-left: .8rem;
+    padding-right: .8rem;
     border-radius: 0;
+    color: $gray;
   }
 }
 
@@ -327,7 +328,7 @@
 
 // Footer
 .pf-footer {
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid $blue-lighter;
   padding: 3rem 0;
   @extend .bg-waves-3;
   background-position: bottom;
