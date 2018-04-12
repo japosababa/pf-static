@@ -7810,12 +7810,15 @@ footer {
     overflow-wrap: break-word;
     color: #9b9b9b;
     background-color: #fafafa;
-    height: 100%; }
+    height: 100%;
+    transition: color .3s; }
   @media (min-width: 1100px) {
     .pf-card-query:hover {
       -ms-transform: translateY(10px);
           transform: translateY(10px);
-      transition: transform .3s; } }
+      transition: transform .3s; }
+      .pf-card-query:hover .card-body {
+        color: #222; } }
   .pf-card-query:after {
     content: "";
     position: absolute;

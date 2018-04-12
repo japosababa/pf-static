@@ -247,11 +247,15 @@
     //background-color: #eee;
     background-color: #fafafa;
     height: 100%;
+    transition: color .3s;
   }
   &:hover {
     @include media-breakpoint-up(lg) {
       transform: translateY(10px);
       transition: transform .3s;
+      .card-body {
+        color: #222;
+      }
     }
   }
   &:after {
