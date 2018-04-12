@@ -7564,9 +7564,14 @@ footer {
       max-width: 1400px; } }
 
 .bg-waves-3, .pf-footer {
-  background: url("../img/bg-feed-1.svg") no-repeat center 65%;
+  background: url("../img/bg-feed-1.svg") no-repeat;
   background-attachment: fixed;
-  background-size: 100%; }
+  background-position: right 200%;
+  background-size: 500%; }
+  @media (min-width: 1100px) {
+    .bg-waves-3, .pf-footer {
+      background-size: 100%;
+      background-position: center 65%; } }
 
 .bg-waves-4 {
   background: url("../img/waves-4.svg") no-repeat center 5rem;
