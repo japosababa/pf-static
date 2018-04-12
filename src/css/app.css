@@ -7783,7 +7783,7 @@ footer {
     position: relative;
     overflow-wrap: break-word;
     color: #9b9b9b;
-    background-color: #eee;
+    background-color: #fafafa;
     height: 100%; }
   @media (min-width: 1100px) {
     .pf-card-query:hover {
@@ -7800,7 +7800,7 @@ footer {
     display: block;
     height: 3rem;
     width: 98%;
-    background: linear-gradient(rgba(238, 238, 238, 0.25), #eee); }
+    background: linear-gradient(rgba(250, 250, 250, 0.25), #fafafa); }
 
 .pf-card-article {
   width: 100%;
@@ -7854,11 +7854,11 @@ footer {
   background: url("../img/bocharsky.jpg") no-repeat center;
   background-size: cover;
   height: 100%;
-  min-height: 300px;
+  min-height: 240px;
   border-radius: 0.25rem; }
   @media (min-width: 1100px) {
     .pf-photo-bocharsky {
-      min-height: 240px; } }
+      min-height: 260px; } }
 
 .pf-testimonial {
   font-size: .9rem;
@@ -7978,7 +7978,7 @@ body, .t-n {
   font-size: 1rem; }
   @media (min-width: 1600px) {
     body, .t-n {
-      font-size: 1.05rem; } }
+      font-size: 1.1rem; } }
 
 .t-s, .pf-testimonial .pf-testimonial-person, .pf-figure .pf-figure-caption {
   font-size: .8rem !important; }

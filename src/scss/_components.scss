@@ -227,7 +227,8 @@
     position: relative;
     overflow-wrap: break-word;
     color: #9b9b9b;
-    background-color: #eee;
+    //background-color: #eee;
+    background-color: #fafafa;
     height: 100%;
   }
   &:hover {
@@ -245,7 +246,7 @@
     display: block;
     height: 3rem;
     width: 98%;
-    background: linear-gradient(rgba(#eee, 0.25), #eee);
+    background: linear-gradient(rgba(#fafafa, 0.25), #fafafa);
   }
 }
 
@@ -301,10 +302,10 @@
   background: url('../img/bocharsky.jpg') no-repeat center;
   background-size: cover;
   height: 100%;
-  min-height: 300px;
+  min-height: 240px;
   border-radius: $border-radius;
   @include media-breakpoint-up(lg) {
-    min-height: 240px;
+    min-height: 260px;
   }
 }
 
