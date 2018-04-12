@@ -7737,6 +7737,8 @@ footer {
     .carousel-indicators li.active {
       background-color: #FF5252;
       color: #fff; }
+  .carousel-indicators.carousel-indicators-gray li:not(.active) {
+    background-color: #fafafa; }
 
 .carousel-control-next-icon, .carousel-control-prev-icon {
   display: none;
