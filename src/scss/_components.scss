@@ -3,9 +3,9 @@
   background-color: $white;
   display: flex;
   border-radius: $border-radius;
+  max-width: 500px;
   @include media-breakpoint-up(lg) {
     width: 100%;
-    max-width: 500px;
     box-shadow: 0 35px 54px rgba(0, 0, 0, .1), 0 5px 20px rgba(0, 0, 0, .05), 0 0 1px rgba(0, 0, 0, .05);
   }
   @include media-breakpoint-up(xl) {
@@ -220,6 +220,8 @@
     min-height: 50px;
     img {
       max-width: 32px;
+      width: 100%;
+      border-radius: 2px;
     }
   }
   .card-body {

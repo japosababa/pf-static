@@ -99,18 +99,9 @@ if ($(window).width() > 800) {
 <!--Handling the queries and publictions-->
 
 
-var publicationBox = document.querySelector('.js-pb');
-var pbMedia = document.querySelector('.js-pb-media');
-var pbQueryTitle = document.querySelector('.js-pb-query-title');
-var pbFavicon = document.querySelector('.js-pb-query-favicon');
-var pbQueryBody = document.querySelector('.js-pb-query-body');
-var pbQueryLink = document.querySelector('.js-pb-query-link');
-var pbArticleDate = document.querySelector('.js-pb-article-date');
-var pbArticleTitle = document.querySelector('.js-pb-article-title');
-var pbArticleLink = document.querySelector('.js-pb-article-link');
+var publicationsSection = document.querySelector('.js-pb');
 
-
-if (publicationBox) {
+if (publicationsSection) {
     $.ajax({
         type: "GET",
         beforeSend: function (request) {
@@ -119,38 +110,87 @@ if (publicationBox) {
         url: 'https://api.pressfeed.ru/publications/release',
         success: function (msg) {
 
-            var queryData = msg.data[0];
+            var queries = msg.data;
 
-            pbMedia.innerText = queryData.media_name;
-            pbQueryTitle.innerText = queryData.query_title;
-            pbQueryBody.innerText = queryData.query_text.substring(0, 600);
-            pbQueryLink.href = '//pressfeed.ru/private/allquerydetail/' + queryData.query_id + '';
-            pbArticleDate.innerText = '' + queryData.publication_created_at.slice(8, 10) + '.' + queryData.publication_created_at.slice(5, 7) + '.' + queryData.publication_created_at.slice(0, 4);
-            pbArticleTitle.innerText = queryData.publication_title;
-            pbArticleLink.href = queryData.publication_link;
-            pbArticleLink.style.backgroundImage = "url('" + queryData.publication_img + "')";
+            var publicationSlider = document.querySelector('.js-slider-publications');
+            var publicationHTML = '';
 
-            // todo: insert favicon if it exists
-            var faviconUrl = 'https://' + queryData.media_site + '/favicon.ico';
+            for (var x = 0; x < 5; x++) {
+                var mediaName = queries[x].media_name;
+                var queryTitle = queries[x].query_title;
+                var queryText = queries[x].query_text.substring(0, 600);
+                var queryLink = '//pressfeed.ru/private/allquerydetail/' + queries[x].query_id + '';
+                var articleDate = '' + queries[x].publication_created_at.slice(8, 10) + '.' + queries[x].publication_created_at.slice(5, 7) + '.' + queries[x].publication_created_at.slice(0, 4) + '';
+                var articleTitle = queries[x].publication_title;
+                var articleLink = queries[x].publication_link;
+                var articleImage = queries[x].publication_img;
+                var mediaFavicon = '//' + queries[x].media_site + '/favicon.ico';
 
-            function checkFavicon(imageSrc, good, bad) {
-                var img = new Image();
-                img.onload = good;
-                img.onerror = bad;
-                img.src = imageSrc;
+                if (x === 0) {
+                    var slideIsActive = 'active';
+                } else {
+                    slideIsActive = '';
+                }
+
+                publicationHTML += `
+                <div class="carousel-item ${slideIsActive}">
+                <div class="row justify-content-center mb-4 mb-sm-6">
+                <div class="col-md-5">
+                <a class="card pf-card-query" target="_blank" href="${queryLink}">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <img class="mr-2 js-img-cheking" onerror="this.style.display='none'" src="${mediaFavicon}">
+                            <span class="f-semi text-nowrap">${mediaName}</span>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <span>Запрос</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="f-semi t-m mt-3 mb-5">${queryTitle}</h4>
+                        <div>${queryText}</div>
+                    </div>
+                </a>
+            </div>
+                <div class="col-md-1 d-flex justify-content-center">
+                <i class="material-icons d-block d-md-none my-2 text-danger">arrow_downward</i>
+                <svg class="img-fluid d-none d-md-inline-block" width="124" height="22" viewBox="0 0 124 22"
+                     xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <defs>
+                        <path d="M522.62 169l-5.055-5.055-.026-3.861 11.775 10.853-11.629 10.998-.027-4.1 4.835-4.835h-116.493v-4h116.62z"
+                              id="a"/>
+                    </defs>
+                    <g transform="translate(-406 -160)" fill="none">
+                        <mask>
+                            <use xlink:href="#a"/>
+                        </mask>
+                        <use fill="#FF5252" xlink:href="#a"/>
+                    </g>
+                </svg>
+            </div>
+                    <div class="col-md-5">
+                        <a class="card pf-card-article" target="_blank" href="${articleLink}" style="background-image: url('${articleImage}')">
+                            <div class="card-header text-right">
+                                <span class="align-middle">Публикация</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="t-s pb-2">${articleDate}</div>
+                                <h3 class="t-m">${articleTitle}</h3>
+                            </div>
+                            <div class="card-layer"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>`;
             }
 
-            checkFavicon(faviconUrl, function () {
-                pbFavicon.src = faviconUrl;
-                pbFavicon.classList.add('mr-2');
-            }, function () {
-                pbFavicon.classList.add('d-none');
-            });
-
+            publicationSlider.innerHTML = publicationHTML;
 
         }
     });
 }
+
 
 // Plans switcher
 

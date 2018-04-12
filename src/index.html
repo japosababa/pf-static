@@ -194,14 +194,14 @@
                     </picture>
                 </div>
             </div>
-            <a class="carousel-control-prev" data-target="#slider-features" role="button" data-slide="prev">
+            <!--<a class="carousel-control-prev" data-target="#slider-features" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon"></span>
                 <span class="sr-only">Назад</span>
             </a>
             <a class="carousel-control-next" data-target="#slider-features" role="button" data-slide="next">
                 <span class="carousel-control-next-icon"></span>
                 <span class="sr-only">Дальше</span>
-            </a>
+            </a>-->
         </div>
     </div>
 </section>
@@ -209,59 +209,19 @@
 <!-- Publications -->
 <section class="pf-section bg-white js-pb">
     <div class="container container-fluid">
-        <h2 class="t-l text-center mb-4 mb-sm-6">Как запросы становятся публикациями</h2>
-        <!--<p class="text-center mb-4 mb-sm-6">Каждый день в России выходят статьи и передачи, созданные с помощью
-            Pressfeed</p>-->
-        <div class="row justify-content-center mb-4 mb-sm-6">
-            <div class="col-md-5">
-                <a class="card pf-card-query js-pb-query-link" target="_blank" href="">
-                    <div class="card-header">
-                        <div class="d-flex justify-content-center align-items-center">
-                            <img class="js-pb-query-favicon">
-                            <!--<i class="mr-2 material-icons">assignment</i>-->
-                            <span class="js-pb-media f-semi"></span>
-                        </div>
-                        <div class="d-flex justify-content-center align-items-center">
-                            <span>Запрос</span>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h4 class="f-semi t-m mt-3 mb-5 js-pb-query-title"></h4>
-                        <div class="js-pb-query-body"></div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-1 d-flex justify-content-center">
-                <i class="material-icons d-block d-md-none my-2 text-danger">arrow_downward</i>
-                <svg class="img-fluid d-none d-md-inline-block" width="124" height="22" viewBox="0 0 124 22"
-                     xmlns="http://www.w3.org/2000/svg"
-                     xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <defs>
-                        <path d="M522.62 169l-5.055-5.055-.026-3.861 11.775 10.853-11.629 10.998-.027-4.1 4.835-4.835h-116.493v-4h116.62z"
-                              id="a"/>
-                    </defs>
-                    <g transform="translate(-406 -160)" fill="none">
-                        <mask>
-                            <use xlink:href="#a"/>
-                        </mask>
-                        <use fill="#FF5252" xlink:href="#a"/>
-                    </g>
-                </svg>
-            </div>
-            <div class="col-md-5">
-                <a class="card pf-card-article js-pb-article-link" target="_blank" href="">
-                    <div class="card-header text-right">
-                        <!--<i class="material-icons align-middle">description</i>--><span class="align-middle">Публикация</span>
-                        <!--<span class="float-right js-pb-media"></span>-->
-                    </div>
-                    <div class="card-body">
-                        <div class="t-s pb-2 js-pb-article-date"></div>
-                        <h3 class="t-m js-pb-article-title"></h3>
-                    </div>
-                    <div class="card-layer"></div>
-                </a>
-            </div>
+        <h2 class="t-l text-center mb-3">Как запросы становятся публикациями</h2>
+
+        <div id="slider-publications" class="carousel slide" data-interval="false">
+            <ol class="carousel-indicators mb-5">
+                <li data-target="#slider-publications" data-slide-to="0" class="active">1</li>
+                <li data-target="#slider-publications" data-slide-to="1">2</li>
+                <li data-target="#slider-publications" data-slide-to="2">3</li>
+                <li data-target="#slider-publications" data-slide-to="3">4</li>
+                <li data-target="#slider-publications" data-slide-to="4">5</li>
+            </ol>
+            <div class="js-slider-publications carousel-inner"></div>
         </div>
+
         <form class="pf-signup mx-auto">
             <input type="email" class="form-control" placeholder="Ваша почта" maxlength="200" required>
             <button type="submit" class="btn btn-lg btn-warning">Регистрация</button>
@@ -318,11 +278,10 @@
             </div>
         </div>
     </div>
-    </div>
 </section>
 
 <!-- History -->
-<section class="pf-section-zero py-5">
+<section class="pf-section-zero py-7">
     <div class="container container-fluid">
         <div class="row justify-content-center">
             <div class="col-md-4">
@@ -330,7 +289,8 @@
             </div>
             <div class="col-md-5">
                 <div class="px-3">
-                    <h3 class="text-gray-light mb-3 mt-4 mt-lg-0 f-semi">Сделано журналистами</h3>
+                    <h2 class="t-l mb-3 mt-4 mt-lg-0">Сделано журналистами</h2>
+                    <!--<h3 class="text-gray-light mb-3 mt-4 mt-lg-0 f-semi">Сделано журналистами</h3>-->
                     Привет! Я&nbsp;&mdash; Константин Бочарский, экс-редактор журнала &laquo;Секрет
                     Фирмы&raquo;,
                     ИД&nbsp;&laquo;Коммерсантъ&raquo;. Сервис Pressfeed я&nbsp;придумал, чтобы помочь себе и&nbsp;коллегам
