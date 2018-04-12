@@ -7573,6 +7573,16 @@ footer {
       background-size: 100%;
       background-position: center 65%; } }
 
+.bg-waves-3-gray {
+  background: url("../img/bg-feed-1-gray.svg") no-repeat;
+  background-attachment: fixed;
+  background-position: right 200%;
+  background-size: 500%; }
+  @media (min-width: 1100px) {
+    .bg-waves-3-gray {
+      background-size: 100%;
+      background-position: center 65%; } }
+
 .bg-waves-4 {
   background: url("../img/waves-4.svg") no-repeat center 5rem;
   background-size: 100%; }
@@ -7908,7 +7918,7 @@ footer {
   @media (min-width: 768px) {
     .pf-footer {
       padding: 5vw !important;
-      background-position-y: 32vw;
+      background-position-y: 36vw;
       background-size: 100%; } }
 
 .pf-faq {

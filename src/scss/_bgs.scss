@@ -9,6 +9,17 @@
   }
 }
 
+.bg-waves-3-gray {
+  background: url("../img/bg-feed-1-gray.svg") no-repeat;
+  background-attachment: fixed;
+  background-position: right 200%;
+  background-size: 500%;
+  @include media-breakpoint-up(lg) {
+    background-size: 100%;
+    background-position: center 65%;
+  }
+}
+
 .bg-waves-4 {
   background: url("../img/waves-4.svg") no-repeat center 5rem;
   background-size: 100%;
