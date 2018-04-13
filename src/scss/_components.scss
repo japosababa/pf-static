@@ -398,8 +398,8 @@
   //counter-reset: item;
   .pf-faq-item {
     & + .pf-faq-item {
-      margin-top: .75rem;
-      padding-top: 1.25rem;
+      margin-top: 1.25rem;
+      padding-top: 1.75rem;
       border-top: 1px solid rgba(0,0,0,0.15);
     }
     .pf-faq-question {
@@ -407,6 +407,7 @@
       margin-bottom: .5rem;
       color: $black;
       position: relative;
+      line-height: 1.3;
       @extend .t-m;
       &:before {
         //counter-increment: item;
@@ -419,7 +420,6 @@
       }
     }
     .pf-faq-answer {
-      /*font-size: 1.1rem;*/
       color: #333;
     }
   }
