@@ -1,11 +1,11 @@
 .bg-waves-3 {
   background: url("../img/bg-feed-1.svg") no-repeat;
-  background-attachment: fixed;
-  background-position: right 200%;
+  //background-attachment: fixed;
+  background-position: right 22%;
   background-size: 500%;
   @include media-breakpoint-up(lg) {
-    background-size: 100%;
-    background-position: center 70%;
+    background-size: 105%;
+    background-position: center 40%;
   }
 }
 
