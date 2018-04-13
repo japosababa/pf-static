@@ -41,14 +41,6 @@
   },
   {
     "id": 6,
-    "title": "Получение визы США в других странах",
-    "media": "The Village.ru",
-    "logo": "img/logos/logo-village-sm.png",
-    "star": "star_border",
-    "star-state": "text-gray-light-2"
-  },
-  {
-    "id": 7,
     "title": "Для подготовки сюжета нужны кафе и рестораны Москвы",
     "media": "Комсомольская правда",
     "logo": "img/logos/logo-kp-sm.png",
@@ -56,7 +48,7 @@
     "star-state": "text-gray-light-2"
   },
   {
-    "id": 8,
+    "id": 7,
     "title": "Нужен комментарий окулиста об альбинизме",
     "media": "Афиша Daily",
     "logo": "img/logos/logo-afisha-sm.png",
@@ -64,7 +56,7 @@
     "star-state": "text-gray-light-2"
   },
   {
-    "id": 9,
+    "id": 8,
     "title": "Успешные люди (топ-менеджеры, предприниматели etc) и видеоигры",
     "media": "GQ",
     "logo": "img/logos/logo-gq-sm.png",
@@ -72,11 +64,19 @@
     "star-state": "text-primary"
   },
   {
-    "id": 10,
+    "id": 9,
     "title": "Декриминализация побоев: разбираем на конкретном кейсе",
     "media": "Gazeta.ru",
     "logo": "img/logos/logo-gazeta-sm.png",
     "star": "star_border",
     "star-state": "text-gray-light-2"
-  }
+  },
+  {
+    "id": 10,
+    "title": "Получение визы США в других странах",
+    "media": "The Village.ru",
+    "logo": "img/logos/logo-village-sm.png",
+    "star": "star_border",
+    "star-state": "text-gray-light-2"
+  },
 ]
