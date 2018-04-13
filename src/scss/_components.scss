@@ -395,29 +395,32 @@
 .pf-faq {
   margin: auto;
   max-width: 800px;
-  counter-reset: item;
+  //counter-reset: item;
   .pf-faq-item {
     & + .pf-faq-item {
-      margin-top: 1rem;
+      margin-top: .75rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid rgba(0,0,0,0.15);
     }
-
     .pf-faq-question {
       display: inline-block;
       margin-bottom: .5rem;
-
+      color: $black;
       position: relative;
       @extend .t-m;
       &:before {
-        counter-increment: item;
-        content: "" counter(item) ".";
+        //counter-increment: item;
+        //content: "" counter(item) ".";
+        content: "•";
         position: absolute;
-        left: -2.5rem;
-        color: $brand-danger;
-        font-weight: 500;
+        left: -1.75rem;
+        color: $brand-primary;
+        font-weight: 800;
       }
     }
     .pf-faq-answer {
       /*font-size: 1.1rem;*/
+      color: #333;
     }
   }
 }
