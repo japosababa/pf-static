@@ -1,81 +1,81 @@
 [
   {
     "id": 1,
-    "title": "Вы ресторатор. К вам пришли следователи. Что делать?",
+    "title": "Вы ресторатор. К вам пришли следователи. Что делать",
     "media": "Секрет фирмы",
-    "logo": "img/logos/logo-rt-sm.png",
+    "logo": "img/logos/logo-secret-sm.png",
     "star": "star_border",
     "star-state": "text-gray-light-2"
   },
   {
     "id": 2,
-    "title": "Зачем Amazon купил Whole Foods Market? Ваше мнение",
-    "media": "GQ",
-    "logo": "img/logos/logo-gq-sm.png",
-    "star": "star",
-    "star-state": "text-primary"
+    "title": "Срочно: ослабление санкций США против ФСБ",
+    "media": "Коммерсант",
+    "logo": "img/logos/logo-kommers-sm.png",
+    "star": "star_border",
+    "star-state": "text-gray-light-2"
   },
   {
     "id": 3,
-    "title": "Каким будет курс биткоина к концу 2018?",
+    "title": "Что действительно необходимо в мобильном телефоне",
+    "media": "Первый канал",
+    "logo": "img/logos/logo-pervy-sm.png",
+    "star": "star_border",
+    "star-state": "text-gray-light-2"
+  },
+  {
+    "id": 4,
+    "title": "Майнинг-отели: новая бизнес-модель на рынке криптовалют",
     "media": "РБК",
     "logo": "img/logos/logo-rbk-sm.png",
     "star": "star_border",
     "star-state": "text-gray-light-2"
   },
   {
-    "id": 4,
-    "title": "Нужен капитан: как готовить судно к сезону навигации",
-    "media": "Коммерсант",
-    "logo": "img/logos/logo-pervy-sm.png",
-    "star": "star_border",
-    "star-state": "text-gray-light-2"
+    "id": 5,
+    "title": "Рынок недвижимости и ипотека в 2018 году",
+    "media": "Forbes",
+    "logo": "img/logos/logo-forbes-sm.png",
+    "star": "star",
+    "star-state": "text-primary"
   },
   {
     "id": 6,
-    "title": "Зачем Amazon купил Whole Foods Market? Ваше мнение",
-    "media": "Коммерсант",
-    "logo": "img/logos/logo-kommers-sm.png",
+    "title": "Получение визы США в других странах",
+    "media": "The Village.ru",
+    "logo": "img/logos/logo-village-sm.png",
     "star": "star_border",
     "star-state": "text-gray-light-2"
   },
   {
     "id": 7,
-    "title": "Зачем Amazon купил Whole Foods Market? Ваше мнение",
-    "media": "Коммерсант",
-    "logo": "img/logos/logo-kommers-sm.png",
-    "star": "star",
-    "star-state": "text-primary"
+    "title": "Для подготовки сюжета нужны кафе и рестораны Москвы",
+    "media": "Комсомольская правда",
+    "logo": "img/logos/logo-kp-sm.png",
+    "star": "star_border",
+    "star-state": "text-gray-light-2"
   },
   {
     "id": 8,
-    "title": "Зачем Amazon купил Whole Foods Market? Ваше мнение",
-    "media": "Коммерсант",
-    "logo": "img/logos/logo-kommers-sm.png",
+    "title": "Нужен комментарий окулиста об альбинизме",
+    "media": "Афиша Daily",
+    "logo": "img/logos/logo-afisha-sm.png",
     "star": "star_border",
     "star-state": "text-gray-light-2"
   },
   {
     "id": 9,
-    "title": "Зачем Amazon купил Whole Foods Market? Ваше мнение",
-    "media": "Коммерсант",
-    "logo": "img/logos/logo-kommers-sm.png",
-    "star": "star_border",
-    "star-state": "text-gray-light-2"
+    "title": "Успешные люди (топ-менеджеры, предприниматели etc) и видеоигры",
+    "media": "GQ",
+    "logo": "img/logos/logo-gq-sm.png",
+    "star": "star",
+    "star-state": "text-primary"
   },
   {
     "id": 10,
-    "title": "Зачем Amazon купил Whole Foods Market? Ваше мнение",
-    "media": "Коммерсант",
-    "logo": "img/logos/logo-kommers-sm.png",
-    "star": "star_border",
-    "star-state": "text-gray-light-2"
-  },
-  {
-    "id": 11,
-    "title": "Зачем Amazon купил Whole Foods Market? Ваше мнение",
-    "media": "Коммерсант",
-    "logo": "img/logos/logo-kommers-sm.png",
+    "title": "Декриминализация побоев: разбираем на конкретном кейсе",
+    "media": "Gazeta.ru",
+    "logo": "img/logos/logo-gazeta-sm.png",
     "star": "star_border",
     "star-state": "text-gray-light-2"
   }

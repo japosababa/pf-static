@@ -27,7 +27,7 @@ title: Pressfeed
                         {{#each queries}}
                         <a class="w-100" href="https://pressfeed.ru/signup">
                             <img src="{{this.logo}}" alt="{{this.media}}">
-                            <div class="ml-3">{{this.title}}</div>
+                            <div class="ml-3"><small class="d-block text-primary f-semi">{{this.media}}</small>{{this.title}}</div>
                             <div class="ml-auto d-none d-md-inline-block">
                                 <i class='material-icons t-n {{this.star-state}}'>{{this.star}}</i>
                                 <i class='material-icons text-gray-light-2 t-n ml-3'>check</i>
@@ -36,7 +36,6 @@ title: Pressfeed
                         {{/each}}
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
