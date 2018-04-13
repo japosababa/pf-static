@@ -240,7 +240,7 @@ $(document).ready(function () {
         slidesToShow: 5,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 1000,
+        autoplaySpeed: 1500,
         speed: 1500,
         swipeToSlide: true,
         verticalSwiping: true,
