@@ -19,7 +19,6 @@ article,
 aside,
 footer,
 header,
-footer,
 nav,
 section {
   display: block; }
@@ -6852,7 +6851,7 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 
 .b {
   border: 1px solid #DBEAF8; }
-  .bt, footer {
+  .bt {
     border-top: 1px solid #DBEAF8; }
   .bb {
     border-bottom: 1px solid #DBEAF8; }
@@ -6937,10 +6936,11 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  opacity: 0;
-  transition: opacity .5s; }
-  body.page-loaded {
-    opacity: 1; }
+  /*opacity: 0;
+  transition: opacity .5s;
+  &.page-loaded {
+    opacity: 1;
+  }*/ }
 
 section:not(.pf-section):not(.pf-section-zero) {
   position: relative;
@@ -7358,24 +7358,24 @@ section:not(.pf-section):not(.pf-section-zero) {
 .zoomout {
   cursor: zoom-out; }
 
-header .burger, footer .burger {
+header .burger {
   padding: 6px;
   cursor: pointer; }
-  header .burger div, footer .burger div {
+  header .burger div {
     width: 30px;
     height: 2px;
     background-color: #0275D8;
     transition: transform .2s;
     will-change: transform; }
-    header .burger div:not(:last-child), footer .burger div:not(:last-child) {
+    header .burger div:not(:last-child) {
       margin-bottom: 6px; }
-  header .burger.is-open div:nth-child(1), footer .burger.is-open div:nth-child(1) {
+  header .burger.is-open div:nth-child(1) {
     -ms-transform: rotate(-45deg) translate(-4px, 8px);
         transform: rotate(-45deg) translate(-4px, 8px);
     height: 1px; }
-  header .burger.is-open div:nth-child(2), footer .burger.is-open div:nth-child(2) {
+  header .burger.is-open div:nth-child(2) {
     opacity: 0; }
-  header .burger.is-open div:nth-child(3), footer .burger.is-open div:nth-child(3) {
+  header .burger.is-open div:nth-child(3) {
     -ms-transform: rotate(45deg) translate(-2px, -7px);
         transform: rotate(45deg) translate(-2px, -7px);
     height: 1px; }
@@ -7428,14 +7428,6 @@ header .burger, footer .burger {
 .nav-menu-faq.affix {
   position: fixed !important;
   top: 100px; }
-
-footer {
-  position: relative;
-  border-bottom: none;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-  overflow-x: hidden;
-  z-index: 1; }
 
 .pf-header {
   position: fixed;
@@ -7571,6 +7563,8 @@ footer {
     .bg-waves-3, .pf-footer {
       background-size: 105%;
       background-position: center 40%; } }
+  .bg-waves-3.bg-waves-3-bottom, .bg-waves-3-bottom.pf-footer {
+    background-position: center 220px; }
 
 .bg-waves-3-gray {
   background: url("../img/bg-feed-1-gray.svg") no-repeat;
@@ -8047,7 +8041,7 @@ body, .t-n, .pf-figure .pf-figure-caption {
       font-size: 1.4rem; } }
   @media (min-width: 1600px) {
     .t-m, .pf-signup input, .pf-signup button, .pf-faq .pf-faq-item .pf-faq-question, .list-featured .list-featured-item h3 {
-      font-size: 1.7rem; } }
+      font-size: 1.6rem; } }
 
 .t-l, .pf-punchline .lead {
   font-size: 1.5rem; }
@@ -8068,7 +8062,7 @@ body, .t-n, .pf-figure .pf-figure-caption {
       font-size: 3rem; } }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-  line-height: 1.2; }
+  line-height: 1.35; }
   @media (min-width: 1600px) {
     h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
       letter-spacing: 0.4px; } }
@@ -8084,7 +8078,7 @@ a, .btn-link, button {
     transition: color .3s;
     outline: none; }
 
-header a[href^="callto:"], footer a[href^="callto:"] {
+header a[href^="callto:"] {
   color: #000;
   font-weight: 500;
   font-size: .9rem;

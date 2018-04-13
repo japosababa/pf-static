@@ -104,16 +104,3 @@ header {
 }
 
 // Tabs
-
-// Footer
-
-footer {
-  @extend header;
-  position: relative;
-  border-bottom: none;
-  @extend .bt;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-  overflow-x: hidden;
-  z-index: 1;
-}

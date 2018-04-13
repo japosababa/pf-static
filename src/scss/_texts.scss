@@ -17,7 +17,7 @@ body, .t-n {
     font-size: 1.4rem;
   }
   @include media-breakpoint-up(xl) {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -44,7 +44,7 @@ body, .t-n {
 // Headings
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-  line-height: 1.2;
+  line-height: 1.35;
   @include media-breakpoint-up(xl) {
     letter-spacing: 0.4px;
   }

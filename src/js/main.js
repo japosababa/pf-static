@@ -1,24 +1,22 @@
 // On load
-function domLoaded() {
+/*function domLoaded() {
     document.querySelector('body').classList.add('page-loaded');
 }
 
-window.addEventListener("DOMContentLoaded", domLoaded);
+window.addEventListener("DOMContentLoaded", domLoaded);*/
+
 
 
 // BS popovers and tooltips
 $(function () {
-    $('.chart-popover').popover({
-        container: 'body',
-        trigger: 'click',
-        html: true
-    });
-    $('.popoverIsShown').popover('show');
-});
+    $('[data-toggle="popover"]').popover()
+})
 
 $(function () {
     $('[data-toggle="tooltip"]').tooltip()
 });
+
+
 
 // Fire testimonials slider
 if ($(window).width() > 800) {
