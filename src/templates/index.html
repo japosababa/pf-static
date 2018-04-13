@@ -13,26 +13,27 @@ title: Pressfeed
                     <p class="lead"><a href="s-jours.html">Журналистам</a> — фактура для&nbsp;статей. <br
                             class="d-none d-sm-block"> <a href="s-experts.html">Экспертам</a>&nbsp;— упоминания в&nbsp;СМИ.
                     </p>
-                    <form class="pf-signup mx-auto mb-5 mt-4 mb-md-6 mt-md-5">
-                        <input type="email" class="form-control" placeholder="Ваша почта" maxlength="200" required>
-                        <button type="submit" class="btn btn-lg btn-warning">Регистрация</button>
-                    </form>
-                    <div class="pf-queries-list">
-                        <div class="pf-queries-list-label">Запросы крупнейших СМИ на&nbsp;Pressfeed</div>
-                        <div class="pf-query-slider">
-                            {{#each queries}}
-                            <a class="w-100" href="https://pressfeed.ru/signup">
-                                <img src="{{this.logo}}" alt="{{this.media}}">
-                                <div class="ml-3">{{this.title}}</div>
-                                <div class="ml-auto d-none d-md-inline-block">
-                                    <i class='material-icons t-n {{this.star-state}}'>{{this.star}}</i>
-                                    <i class='material-icons text-gray-light-2 t-n ml-3'>check</i>
-                                </div>
-                            </a>
-                            {{/each}}
-                        </div>
+                </div>
+                <form class="pf-signup mx-auto mb-5 mt-4 mb-md-6 mt-md-5">
+                    <input type="email" class="form-control" placeholder="Ваша почта" maxlength="200" required>
+                    <button type="submit" class="btn btn-lg btn-warning">Регистрация</button>
+                </form>
+                <div class="pf-queries-list">
+                    <div class="pf-queries-list-label">Запросы крупнейших СМИ на&nbsp;Pressfeed</div>
+                    <div class="pf-query-slider">
+                        {{#each queries}}
+                        <a class="w-100" href="https://pressfeed.ru/signup">
+                            <img src="{{this.logo}}" alt="{{this.media}}">
+                            <div class="ml-3">{{this.title}}</div>
+                            <div class="ml-auto d-none d-md-inline-block">
+                                <i class='material-icons t-n {{this.star-state}}'>{{this.star}}</i>
+                                <i class='material-icons text-gray-light-2 t-n ml-3'>check</i>
+                            </div>
+                        </a>
+                        {{/each}}
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
