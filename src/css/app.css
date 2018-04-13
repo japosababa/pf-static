@@ -7667,7 +7667,7 @@ footer {
       margin-top: 0;
       border: none;
       box-shadow: 0 35px 54px rgba(0, 0, 0, 0.1), 0 5px 20px rgba(0, 0, 0, 0.05), 0 0 1px rgba(0, 0, 0, 0.05); } }
-  .pf-queries-list a {
+  .pf-queries-list a.slick-slide {
     display: -ms-flexbox;
     display: flex;
     width: 100%;
@@ -7676,13 +7676,13 @@ footer {
     padding: .6rem 1.25rem;
     color: #222; }
     @media (min-width: 576px) {
-      .pf-queries-list a {
+      .pf-queries-list a.slick-slide {
         padding: 1rem 1.5rem; } }
-    .pf-queries-list a:not(:first-child) {
+    .pf-queries-list a.slick-slide:not(:first-child) {
       border-top: 1px solid rgba(0, 0, 0, 0.05); }
-    .pf-queries-list a:hover {
+    .pf-queries-list a.slick-slide:hover {
       color: #025aa5; }
-    .pf-queries-list a img {
+    .pf-queries-list a.slick-slide img {
       width: 35px;
       height: 35px; }
 
@@ -8095,9 +8095,9 @@ header a[href^="callto:"], footer a[href^="callto:"] {
 
 .pf-logo {
   font-size: 1.5rem;
+  color: #000 !important;
   letter-spacing: .25px;
-  font-weight: 700;
-  color: #000; }
+  font-weight: 700; }
   @media only screen and (min-width: 1200px) {
     .pf-logo {
       font-size: 1.3rem; } }

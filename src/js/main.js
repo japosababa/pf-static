@@ -20,29 +20,6 @@ $(function () {
     $('[data-toggle="tooltip"]').tooltip()
 });
 
-// Fire publication slider
-$(document).ready(function () {
-    $('.slider-logos').slick({
-        infinite: true,
-        dots: false,
-        arrows: false,
-        slidesToShow: 8,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        speed: 1500,
-        swipeToSlide: true,
-        responsive: [
-            {
-                breakpoint: 560,
-                settings: {
-                    slidesToShow: 3,
-                }
-            },
-        ]
-    });
-});
-
 // Fire testimonials slider
 if ($(window).width() > 800) {
     $(document).ready(function () {
@@ -250,3 +227,30 @@ if (planSwitcher) {
     }
 
 }
+
+
+// Rotating queries slider
+
+$(document).ready(function () {
+    $('.pf-query-slider').slick({
+        vertical: true,
+        infinite: true,
+        dots: false,
+        arrows: false,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        speed: 1500,
+        swipeToSlide: true,
+        verticalSwiping: true,
+        /*responsive: [
+            {
+                breakpoint: 560,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+        ]*/
+    });
+});

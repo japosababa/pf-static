@@ -1,40 +1,82 @@
 [
   {
     "id": 1,
-    "title1": "Вы ресторатор. К вам пришли следователи. Что делать?",
-    "title2": "Вы ресторатор. К вам пришли следователи. Что делать?",
-    "title3": "Вы ресторатор. К вам пришли следователи. Что делать?",
-    "title4": "Вы ресторатор. К вам пришли следователи. Что делать?",
-    "title5": "Вы ресторатор. К вам пришли следователи. Что делать?",
+    "title": "Вы ресторатор. К вам пришли следователи. Что делать?",
     "media": "Секрет фирмы",
-    "logo1": "img/logos/logo-rt-sm.png",
-    "logo2": "img/logos/logo-rt-sm.png",
-    "logo3": "img/logos/logo-rt-sm.png",
-    "logo4": "img/logos/logo-rt-sm.png",
-    "logo6": "img/logos/logo-rt-sm.png"
+    "logo": "img/logos/logo-rt-sm.png",
+    "star": "star_border",
+    "star-state": "text-gray-light-2"
   },
   {
     "id": 2,
-    "title1": "Зачем Amazon купил Whole Foods Market? Ваше мнение",
+    "title": "Зачем Amazon купил Whole Foods Market? Ваше мнение",
     "media": "GQ",
-    "logo1": "img/logos/logo-gq-sm.png"
+    "logo": "img/logos/logo-gq-sm.png",
+    "star": "star",
+    "star-state": "text-primary"
   },
   {
     "id": 3,
-    "title1": "Каким будет курс биткоина к концу 2018?",
+    "title": "Каким будет курс биткоина к концу 2018?",
     "media": "РБК",
-    "logo1": "img/logos/logo-rbk-sm.png"
+    "logo": "img/logos/logo-rbk-sm.png",
+    "star": "star_border",
+    "star-state": "text-gray-light-2"
   },
   {
     "id": 4,
-    "title1": "Нужен капитан: как готовить судно к сезону навигации",
+    "title": "Нужен капитан: как готовить судно к сезону навигации",
     "media": "Коммерсант",
-    "logo1": "img/logos/logo-pervy-sm.png"
+    "logo": "img/logos/logo-pervy-sm.png",
+    "star": "star_border",
+    "star-state": "text-gray-light-2"
   },
   {
-    "id": 5,
-    "title1": "Зачем Amazon купил Whole Foods Market? Ваше мнение",
+    "id": 6,
+    "title": "Зачем Amazon купил Whole Foods Market? Ваше мнение",
     "media": "Коммерсант",
-    "logo1": "img/logos/logo-kommers-sm.png"
+    "logo": "img/logos/logo-kommers-sm.png",
+    "star": "star_border",
+    "star-state": "text-gray-light-2"
+  },
+  {
+    "id": 7,
+    "title": "Зачем Amazon купил Whole Foods Market? Ваше мнение",
+    "media": "Коммерсант",
+    "logo": "img/logos/logo-kommers-sm.png",
+    "star": "star",
+    "star-state": "text-primary"
+  },
+  {
+    "id": 8,
+    "title": "Зачем Amazon купил Whole Foods Market? Ваше мнение",
+    "media": "Коммерсант",
+    "logo": "img/logos/logo-kommers-sm.png",
+    "star": "star_border",
+    "star-state": "text-gray-light-2"
+  },
+  {
+    "id": 9,
+    "title": "Зачем Amazon купил Whole Foods Market? Ваше мнение",
+    "media": "Коммерсант",
+    "logo": "img/logos/logo-kommers-sm.png",
+    "star": "star_border",
+    "star-state": "text-gray-light-2"
+  },
+  {
+    "id": 10,
+    "title": "Зачем Amazon купил Whole Foods Market? Ваше мнение",
+    "media": "Коммерсант",
+    "logo": "img/logos/logo-kommers-sm.png",
+    "star": "star_border",
+    "star-state": "text-gray-light-2"
+  },
+  {
+    "id": 11,
+    "title": "Зачем Amazon купил Whole Foods Market? Ваше мнение",
+    "media": "Коммерсант",
+    "logo": "img/logos/logo-kommers-sm.png",
+    "star": "star_border",
+    "star-state": "text-gray-light-2"
   }
 ]
