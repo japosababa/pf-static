@@ -14,7 +14,7 @@ body, .t-n {
 .t-m {
   font-size: 1.1rem;
   @include media-breakpoint-up(sm) {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
   @include media-breakpoint-up(xl) {
     font-size: 1.7rem;
@@ -22,22 +22,22 @@ body, .t-n {
 }
 
 .t-l {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   @include media-breakpoint-up(sm) {
-    font-size: 2.4rem;
+    font-size: 2.1rem;
   }
   @include media-breakpoint-up(xl) {
-    font-size: 3rem;
+    font-size: 2.4rem;
   }
 }
 
 .t-xl {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   @include media-breakpoint-up(sm) {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   @include media-breakpoint-up(xl) {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 }
 

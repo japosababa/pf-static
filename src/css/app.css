@@ -7440,7 +7440,7 @@ footer {
 .pf-header {
   position: fixed;
   z-index: 210;
-  height: 40px;
+  height: 45px;
   top: 0;
   left: 0;
   width: 100%;
@@ -7544,10 +7544,10 @@ footer {
           justify-content: center;
       min-height: 100vh; } }
   .pf-section.pf-section-first, .pf-section-first.pf-section-zero {
-    padding-top: 5.5rem; }
+    padding-top: 5rem; }
     @media (min-width: 768px) {
       .pf-section.pf-section-first, .pf-section-first.pf-section-zero {
-        padding-top: 7vw; } }
+        padding-top: 6rem; } }
 
 @media (min-width: 768px) {
   .pf-section-zero {
@@ -7571,7 +7571,7 @@ footer {
   @media (min-width: 1100px) {
     .bg-waves-3, .pf-footer {
       background-size: 100%;
-      background-position: center 65%; } }
+      background-position: center 70%; } }
 
 .bg-waves-3-gray {
   background: url("../img/bg-feed-1-gray.svg") no-repeat;
@@ -7592,6 +7592,18 @@ footer {
 
 .bg-blue-lighter {
   background-color: #DBEAF8; }
+
+@media (min-width: 576px) {
+  .pf-punchline {
+    text-align: center; } }
+
+.pf-punchline h1 {
+  font-weight: 600;
+  letter-spacing: .75px; }
+
+.pf-punchline .lead {
+  font-weight: 300;
+  letter-spacing: .4px; }
 
 .pf-signup {
   background-color: #fff;
@@ -7644,7 +7656,10 @@ footer {
   background-color: rgba(255, 255, 255, 0.75);
   border-radius: 0.25rem;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  margin-top: 2rem; }
+  margin-top: 2rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto; }
   @media (min-width: 1100px) {
     .pf-queries-list {
       margin-top: 0;
@@ -7672,14 +7687,17 @@ footer {
 .pf-queries-list-label {
   display: -ms-flexbox;
   display: flex;
-  padding: .75rem 1.5rem;
-  font-size: .75rem;
+  padding: .6rem 1.5rem;
+  font-size: .85rem;
   font-weight: 500;
   letter-spacing: .2px;
   border-top-left-radius: 0.3rem;
   border-top-right-radius: 0.3rem;
-  color: #636c72;
-  position: relative; }
+  color: #fff;
+  -ms-flex-pack: center;
+      justify-content: center;
+  position: relative;
+  background-color: #333; }
   .pf-queries-list-label:after {
     position: absolute;
     bottom: .5rem;
@@ -8016,28 +8034,28 @@ body, .t-n {
   font-size: 1.1rem; }
   @media (min-width: 576px) {
     .t-m, .pf-signup input, .pf-signup button, .pf-faq .pf-faq-item .pf-faq-question, .list-featured .list-featured-item h3 {
-      font-size: 1.5rem; } }
+      font-size: 1.4rem; } }
   @media (min-width: 1600px) {
     .t-m, .pf-signup input, .pf-signup button, .pf-faq .pf-faq-item .pf-faq-question, .list-featured .list-featured-item h3 {
       font-size: 1.7rem; } }
 
-.t-l {
-  font-size: 1.4rem; }
+.t-l, .pf-punchline .lead {
+  font-size: 1.5rem; }
   @media (min-width: 576px) {
-    .t-l {
+    .t-l, .pf-punchline .lead {
+      font-size: 2.1rem; } }
+  @media (min-width: 1600px) {
+    .t-l, .pf-punchline .lead {
       font-size: 2.4rem; } }
-  @media (min-width: 1600px) {
-    .t-l {
-      font-size: 3rem; } }
 
-.t-xl, .pf-number, .pf-step {
-  font-size: 2.2rem; }
+.t-xl, .pf-punchline h1, .pf-number, .pf-step {
+  font-size: 1.8rem; }
   @media (min-width: 576px) {
-    .t-xl, .pf-number, .pf-step {
-      font-size: 3rem; } }
+    .t-xl, .pf-punchline h1, .pf-number, .pf-step {
+      font-size: 2.5rem; } }
   @media (min-width: 1600px) {
-    .t-xl, .pf-number, .pf-step {
-      font-size: 3.5rem; } }
+    .t-xl, .pf-punchline h1, .pf-number, .pf-step {
+      font-size: 3rem; } }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   line-height: 1.4; }
@@ -8045,7 +8063,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
       letter-spacing: 0.4px; } }
 
-.ff-special {
+.ff-special, .pf-punchline .lead {
   font-family: Open Sans, sans-serif; }
 
 a, .btn-link, button {

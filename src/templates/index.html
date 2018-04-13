@@ -6,66 +6,51 @@ title: Pressfeed
 <!-- Intro -->
 <section class="pf-section pf-section-first bg-waves-3">
     <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-xl-7">
-                <div class="d-md-none">
-                    <h1 class="ff-special f-light mb-4 h3">Cервис журналистских запросов</h1>
-                    <p class="ff-special t-m f-light mb-4">Помогаем <a href="s-jours.html">журналистам</a> быстро
-                        получать фактуру для статей.
-                        А&nbsp;<a href="s-experts.html">экспертам</a>&nbsp;— упоминания в СМИ</p>
-                </div>
-
-                <div class="d-none d-md-block">
-                    <p class="ff-special t-m f-light mb-4">Первый в&nbsp;России сервис журналистских запросов</p>
-                    <h1 class="ff-special t-l f-light mb-4">Помогаем журналистам <span
-                            class="font-italic f-semi">быстро</span> получать <span
-                            class="f-semi">фактуру для&nbsp;статей</span>. А&nbsp;экспертам и&nbsp;пиарщикам — <span
-                            class="f-semi">упоминания в&nbsp;СМИ</span></h1>
-                </div>
-
-
-                <form class="pf-signup mt-lg-6">
-                    <input type="email" class="form-control" placeholder="Ваша почта" maxlength="200" required>
-                    <button type="submit" class="btn btn-lg btn-warning">Регистрация</button>
-                </form>
-            </div>
-            <div class="col-md-6 col-xl-5 pl-3 pl-lg-5">
-                <div class="pf-queries-list">
-                    <div class="pf-queries-list-label">Запросы крупнейших СМИ на&nbsp;Pressfeed</div>
-                    {{#each queries}}
-                    <a href="https://pressfeed.ru/signup">
-                        <img src="{{this.logo}}" alt="{{this.media}}">
-                        <div class="ml-3">{{ this.title }}</div>
-                    </a>
-                    {{/each}}
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="pf-punchline">
+                    <h1>Cервис журналистских запросов</h1>
+                    <p class="lead"><a href="s-jours.html">Журналистам</a> — фактура для&nbsp;статей. <br
+                            class="d-none d-sm-block"> <a href="s-experts.html">Экспертам</a>&nbsp;— упоминания в&nbsp;СМИ.</p>
+                    <form class="pf-signup mx-auto mb-5 mt-4 mb-md-6 mt-md-5">
+                        <input type="email" class="form-control" placeholder="Ваша почта" maxlength="200" required>
+                        <button type="submit" class="btn btn-lg btn-warning">Регистрация</button>
+                    </form>
+                    <div class="pf-queries-list">
+                        <div class="pf-queries-list-label">Запросы крупнейших СМИ на&nbsp;Pressfeed</div>
+                        {{#each queries}}
+                        <a href="https://pressfeed.ru/signup">
+                            <img src="{{this.logo}}" alt="{{this.media}}">
+                            <div class="ml-3">{{ this.title }}</div>
+                        </a>
+                        {{/each}}
+                    </div>
+                    <div class="d-flex justify-content-between text-center text-sm-left flex-column flex-sm-row mt-5 mt-lg-5">
+                        <div>
+                            <div class="pf-number">3600</div>
+                            <p>СМИ размещают запросы на&nbsp;Pressfeed.<br> Это 1/3&nbsp;редакций страны!</p>
+                        </div>
+                        <div>
+                            <div class="pf-number mt-3 mt-sm-0">29000</div>
+                            <p>экспертов отвечают журналистам<br> и&nbsp;получают упоминания в&nbsp;СМИ</p>
+                        </div>
+                        <div>
+                            <div class="pf-number mt-3 mt-sm-0">35000</div>
+                            <p>публикаций и&nbsp;телепередач вышло<br> при участии Pressfeed с&nbsp;2014&nbsp;года </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="d-flex justify-content-between text-center text-sm-left flex-column flex-sm-row mt-5 mt-lg-7">
-            <div>
-                <div class="pf-number">3600</div>
-                <p>СМИ размещают запросы на&nbsp;Pressfeed.<br> Это 1/3&nbsp;редакций страны!</p>
-            </div>
-            <div>
-                <div class="pf-number mt-3 mt-sm-0">29000</div>
-                <p>экспертов отвечают журналистам<br> и&nbsp;получают упоминания в&nbsp;СМИ</p>
-            </div>
-            <div>
-                <div class="pf-number mt-3 mt-sm-0">35000</div>
-                <p>публикаций и&nbsp;телепередач вышло<br> при участии Pressfeed с&nbsp;2014&nbsp;года </p>
-            </div>
-        </div>
-
         <form class="pf-signup d-sm-none mt-4">
             <input type="email" class="form-control" placeholder="Ваша почта" maxlength="200" required>
             <button type="submit" class="btn btn-lg btn-warning">Регистрация</button>
         </form>
-
     </div>
 </section>
 
 <!-- Features -->
-<section class="pf-section bg-light bg-waves-3-gray">
+<section class="pf-section bg-light">
     <div class="container-fluid">
         <h2 class="t-l text-center mb-3">Как работает Pressfeed</h2>
         <div id="slider-features" class="carousel slide" data-interval="false">
@@ -101,7 +86,7 @@ title: Pressfeed
 </section>
 
 <!-- Publications -->
-<section class="pf-section bg-white js-pb bg-waves-3-gray">
+<section class="pf-section bg-white js-pb">
     <div class="container container-fluid">
         <h2 class="t-l text-center mb-3">Как запросы становятся публикациями</h2>
 
@@ -124,7 +109,7 @@ title: Pressfeed
 </section>
 
 <!-- FAQ -->
-<section class="pf-section-zero bg-light bg-waves-3-gray">
+<section class="pf-section-zero bg-light">
     <div class="container container-fluid">
         <h2 class="t-l text-center mb-4">Вопросы</h2>
         <div class="pf-faq">
@@ -157,7 +142,7 @@ title: Pressfeed
                     искать фактуру для
                     заметок.<br><br>
                     <a href="">Как я&nbsp;делал это раньше и как Pressfeed все изменил&nbsp;<i
-                                class="material-icons align-middle">chevron_right</i></a>
+                            class="material-icons align-middle">chevron_right</i></a>
                 </div>
             </div>
             <!--<div class="col-sm-11 justify-content-center mt-2 mt-lg-7">

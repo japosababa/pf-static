@@ -10,9 +10,9 @@
     min-height: 100vh;
   }
   &.pf-section-first {
-    padding-top: 5.5rem;
+    padding-top: 5rem;
     @include media-breakpoint-up(md) {
-      padding-top: 7vw;
+      padding-top: 6rem;
     }
   }
 }

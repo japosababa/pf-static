@@ -1,3 +1,20 @@
+.pf-punchline {
+  @include media-breakpoint-up(sm) {
+    text-align: center;
+  }
+  h1 {
+    font-weight: 600;
+    letter-spacing: .75px;
+    @extend .t-xl;
+  }
+  .lead {
+    @extend .ff-special;
+    font-weight: 300;
+    @extend .t-l;
+    letter-spacing: .4px;
+  }
+}
+
 // Sign up form
 .pf-signup {
   background-color: $white;
@@ -60,6 +77,10 @@
   border-radius: $border-radius;
   border: 1px solid rgba(0, 0, 0, .1);
   margin-top: 2rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+
   @include media-breakpoint-up(lg) {
     margin-top: 0;
     border: none;
@@ -89,14 +110,16 @@
 
 .pf-queries-list-label {
   display: flex;
-  padding: .75rem 1.5rem;
-  font-size: .75rem;
+  padding: .6rem 1.5rem;
+  font-size: .85rem;
   font-weight: 500;
   letter-spacing: .2px;
   border-top-left-radius: $border-radius-lg;
   border-top-right-radius: $border-radius-lg;
-  color: $gray-light;
+  color: $white;
+  justify-content: center;
   position: relative;
+  background-color: #333;
   &:after {
     //content: "";
     position: absolute;
