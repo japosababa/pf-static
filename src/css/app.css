@@ -7991,8 +7991,8 @@ footer {
       .pf-figure .pf-figure-img {
         max-width: 1000px; } }
   .pf-figure .pf-figure-caption {
-    padding-top: .75rem;
-    color: #636c72; }
+    padding-top: 1.75rem;
+    font-weight: 500; }
 
 @media (min-width: 576px) {
   .list-featured {
@@ -8031,13 +8031,13 @@ footer {
           font-size: 1.8rem;
           color: #0275D8; } }
 
-body, .t-n {
+body, .t-n, .pf-figure .pf-figure-caption {
   font-size: 1.1rem; }
   @media (min-width: 1600px) {
-    body, .t-n {
+    body, .t-n, .pf-figure .pf-figure-caption {
       font-size: 1.1rem; } }
 
-.t-s, .pf-testimonial .pf-testimonial-person, .pf-figure .pf-figure-caption {
+.t-s, .pf-testimonial .pf-testimonial-person {
   font-size: .8rem !important; }
 
 .t-m, .pf-signup input, .pf-signup button, .pf-faq .pf-faq-item .pf-faq-question, .list-featured .list-featured-item h3 {

@@ -454,9 +454,9 @@
     }
   }
   .pf-figure-caption {
-    @extend .t-s;
-    padding-top: .75rem;
-    color: $gray-light;
+    @extend .t-n;
+    padding-top: 1.75rem;
+    font-weight: 500;
   }
 }
 
