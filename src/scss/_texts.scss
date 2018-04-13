@@ -90,9 +90,16 @@ header a[href^="callto:"] {
   }
   letter-spacing: .25px;
   font-weight: 700;
-
   &:hover {
     color: $black !important;
+  }
+}
+
+.pf-logo-white {
+  @extend .pf-logo;
+  color: $white !important;
+  &:hover {
+    color: unset !important;
   }
 }
 

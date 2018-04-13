@@ -7501,14 +7501,14 @@ header .burger {
     color: #464a4c; }
     .pf-header a:hover, .pf-header a .active {
       color: #2e3031; }
-  .pf-header .pf-logo {
+  .pf-header .pf-logo, .pf-header .pf-logo-white {
     position: relative;
     background-color: #fff;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
         align-items: center; }
-    .pf-header .pf-logo.active:after {
+    .pf-header .pf-logo.active:after, .pf-header .active.pf-logo-white:after {
       content: "";
       position: absolute;
       width: 2rem;
@@ -8087,16 +8087,21 @@ header a[href^="callto:"] {
 .text-uppercase {
   letter-spacing: .7px; }
 
-.pf-logo {
+.pf-logo, .pf-logo-white {
   font-size: 1.5rem;
   color: #000 !important;
   letter-spacing: .25px;
   font-weight: 700; }
   @media only screen and (min-width: 1200px) {
-    .pf-logo {
+    .pf-logo, .pf-logo-white {
       font-size: 1.3rem; } }
-  .pf-logo:hover {
+  .pf-logo:hover, .pf-logo-white:hover {
     color: #000 !important; }
+
+.pf-logo-white {
+  color: #fff !important; }
+  .pf-logo-white:hover {
+    color: unset !important; }
 
 .btn {
   letter-spacing: .35px; }
