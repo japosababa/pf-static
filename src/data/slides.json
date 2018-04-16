@@ -30,5 +30,13 @@
     "img": "img/screen-4.png",
     "img-mob": "img/screen-mobile-test.png",
     "class": ""
+  },
+  {
+    "id": 5,
+    "slide-index": 4,
+    "title": "Релизы — сообщения для тысяч СМИ, работающих на Pressfeed. Так компании показывают свои новости, не раздражая журналистов спамом в почтовых ящиках",
+    "img": "img/screen-5.png",
+    "img-mob": "img/screen-mobile-test.png",
+    "class": ""
   }
 ]
